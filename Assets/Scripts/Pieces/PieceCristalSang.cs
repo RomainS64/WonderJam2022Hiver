@@ -11,7 +11,8 @@ public class PieceCristalSang : Piece
     [SerializeField] private Sprite cristalEnabledSprite;
     [SerializeField] private Sprite cristalDisabledSprite;
 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField]
+    private SpriteRenderer spriteRendererCristalSang;
 
     private Life life;
 
@@ -24,6 +25,7 @@ public class PieceCristalSang : Piece
     private void Start()
     {
         life = FindObjectOfType<Life>();
+        spriteRendererCristalSang = cristalObject.GetComponent<SpriteRenderer>();
 
         base.Start();
     }
@@ -101,11 +103,11 @@ public class PieceCristalSang : Piece
     {
         if(isCristalActivated)
         {
-            spriteRenderer.sprite = cristalEnabledSprite;
+            spriteRendererCristalSang.sprite = cristalEnabledSprite;
         }
         else
         {
-            spriteRenderer.sprite = cristalDisabledSprite;
+            spriteRendererCristalSang.sprite = cristalDisabledSprite;
         }
     }
 }
