@@ -2231,7 +2231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &803827792
 Transform:
   m_ObjectHideFlags: 0
@@ -3136,6 +3136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typesDePieces:
   - {fileID: 803827793}
+  - {fileID: 324250560}
+  - {fileID: 619003457}
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0
@@ -4870,15 +4872,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
