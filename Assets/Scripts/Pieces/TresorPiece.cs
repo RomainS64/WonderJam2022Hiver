@@ -21,6 +21,8 @@ public class TresorPiece : Piece
     //Choix : description de l'item. Le prendre ?
     protected void OnEnable()
     {
+        SetAttackSprite();
+
         itemWorldInThePiece = ItemWorld.SpawnItemWorld(tresorSpawnTransform, ItemAssets.Instance.GetRandomItemType());
 
         actionDone = true;
@@ -31,14 +33,6 @@ public class TresorPiece : Piece
     {
         if (itemWorldInThePiece.isClicked) return;
 
-        if (Click.IsClickingOn(leftDoor))
-        {
-            pieceManager.GoNextPiece(true);
-
-        }
-        if (Click.IsClickingOn(rightDoor))
-        {
-            pieceManager.GoNextPiece(false);
-        }
+        base.Update();
     }
 }

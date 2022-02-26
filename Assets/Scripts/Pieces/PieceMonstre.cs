@@ -15,20 +15,12 @@ public class PieceMonstre : Piece
     }
     protected void OnEnable()
     {
+        SetAttackSprite();
         combatManager.StartCombat();
     }
     private void Update()
     {
         if (combatManager.isInCombat) return;
-
-        if (Click.IsClickingOn(leftDoor))
-        {
-            pieceManager.GoNextPiece(true);
-
-        }
-        if (Click.IsClickingOn(rightDoor))
-        {
-            pieceManager.GoNextPiece(false);
-        }
+        base.Update();
     }
 }

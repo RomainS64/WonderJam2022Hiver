@@ -19,6 +19,7 @@ public class ChienPiece : Piece
     }
     protected void OnEnable()
     {
+        SetAttackSprite();
         actionDone = false;
         firstPenseeDone = false;
         spriteChien.SetActive(true);
@@ -41,16 +42,7 @@ public class ChienPiece : Piece
         }
         else
         {
-            if (Click.IsClickingOn(leftDoor))
-            {
-                pieceManager.GoNextPiece(true);
-                
-            }
-            if (Click.IsClickingOn(rightDoor))
-            {
-                pieceManager.GoNextPiece(false);
-                
-            }
+            base.Update();
         }
     }
     public void Caresser()
