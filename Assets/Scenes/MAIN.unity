@@ -901,7 +901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &324250560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,9 +914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cc7c24c726b91c4282daef8195586ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSprite: {fileID: 0}
-  thinkingSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 1506467474}
   rightDoor: {fileID: 809928292}
   lifeStolenRatioFromCurrentHealth: 0.5
@@ -941,7 +941,7 @@ Transform:
   - {fileID: 809928293}
   - {fileID: 1361717349}
   m_Father: {fileID: 1086839999}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423309124
 GameObject:
@@ -1818,9 +1818,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81369d7e891296f46b09dc5620d48bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSprite: {fileID: 0}
-  thinkingSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 423309124}
   rightDoor: {fileID: 202866885}
   tresorSpawnTransform: {fileID: 23702445}
@@ -2238,9 +2238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13f95912c60c2346b3b0aa21d5e39f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSprite: {fileID: 0}
-  thinkingSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 1588044464}
   rightDoor: {fileID: 1332057412}
   combatManager: {fileID: 2055729015}
@@ -3112,6 +3112,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   typesDePieces:
   - {fileID: 324250560}
+  - {fileID: 1645042486}
+  - {fileID: 585915337}
+  - {fileID: 1436424220}
+  - {fileID: 619003457}
+  - {fileID: 803827793}
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0
@@ -3129,8 +3134,8 @@ Transform:
   - {fileID: 1436424219}
   - {fileID: 619003458}
   - {fileID: 803827792}
-  - {fileID: 1962822136}
   - {fileID: 324250561}
+  - {fileID: 1962822136}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3697,9 +3702,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb28c6c52ef4f247bf9c05d0f89586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSprite: {fileID: 0}
-  thinkingSprite: {fileID: 0}
-  spriteRenderer: {fileID: 0}
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 712321684}
   rightDoor: {fileID: 747277214}
   squeletteDamageMental: 20
@@ -5297,7 +5302,7 @@ Transform:
   m_LocalScale: {x: 3.3854263, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 1086839999}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1962822137
 SpriteRenderer:
