@@ -5,13 +5,12 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
 
-    [SerializeField] GameObject leftDoor;
-    [SerializeField] GameObject rightDoor;
+    public GameObject leftDoor;
+    public GameObject rightDoor;
 
     private PieceManager pieceManager;
     void Start()
     {
-
         pieceManager = FindObjectOfType<PieceManager>();
     }
     void Update()
