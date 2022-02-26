@@ -7,7 +7,7 @@ public class SquelettePiece : Piece
     [SerializeField] private int squeletteDamageMental;
     [SerializeField] GameObject spriteArmor;
     [SerializeField] private int armorGain;
-    private bool actionDone = false;
+
     private Mental mental;
     private void Start()
     {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    protected bool actionDone = false;
 
     public GameObject leftDoor;
     public GameObject rightDoor;
