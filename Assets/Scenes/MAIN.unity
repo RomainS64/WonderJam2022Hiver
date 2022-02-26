@@ -264,7 +264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14, y: 85}
+  m_AnchoredPosition: {x: 14, y: 50.4}
   m_SizeDelta: {x: -460.5703, y: -298.2922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &93036517
@@ -1603,7 +1603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &585915336
 Transform:
   m_ObjectHideFlags: 0
@@ -1642,6 +1642,9 @@ MonoBehaviour:
   chienDamage: 15
   chienDamageMental: 25
   spriteChien: {fileID: 1581958975}
+  chienSprite: {fileID: 1581958977}
+  chienMimi: {fileID: 21300000, guid: 0d997638326a37542ae874b74413c946, type: 3}
+  chienMechant: {fileID: 21300000, guid: f5ecd25fa7884f94f9cff24c2e152c9e, type: 3}
 --- !u!1 &605686760
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3141,8 @@ MonoBehaviour:
   - {fileID: 803827793}
   - {fileID: 324250560}
   - {fileID: 619003457}
+  - {fileID: 585915337}
+  - {fileID: 1645042486}
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0
