@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Click : MonoBehaviour
 {
-    static bool IsClickingOn(GameObject MyObj)
+    public static bool IsClickingOn(GameObject MyObj)
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -17,7 +17,7 @@ public class Click : MonoBehaviour
         }
         return false;
     }
-    static bool IsClickingOn(GameObject[] MyObjs)
+    public static bool IsClickingOn(GameObject[] MyObjs)
     {
         if (Input.GetMouseButtonDown(0))
         {

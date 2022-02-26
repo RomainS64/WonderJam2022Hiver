@@ -16,23 +16,6 @@ public class Piece : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit))
-            {
-                //Select stage
-                if (hit.transform.Equals(leftDoor))
-                {
-                    //LeftDoor
-                }
-                if (hit.transform.Equals(rightDoor))
-                {
-                    //RightDoor
-                }
-            }
-        }
     }
 
     public void DisplayPiece()
