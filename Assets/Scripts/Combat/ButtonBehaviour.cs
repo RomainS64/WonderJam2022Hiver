@@ -32,7 +32,7 @@ public class ButtonBehaviour : MonoBehaviour
         if (isDefense)
         {
             playerArmor = ArmorManager.GetArmor();
-            playerAttack = 1;
+            playerAttack = 0;
             Debug.Log("Defense");
         }
         else if (isAttack)
@@ -44,7 +44,7 @@ public class ButtonBehaviour : MonoBehaviour
         else
         {
             playerArmor = 1;
-            playerAttack = 1;
+            playerAttack = 0;
             isCharging = true;
             Debug.Log("La prochaine capacité sera multipliée par 2 !!!");
         }

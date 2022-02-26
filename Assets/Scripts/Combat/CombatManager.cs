@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class CombatManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] actionButtons;
+    [SerializeField] private GameObject enemy;
+    private EnemyBehaviour enemyBehaviour;
     [SerializeField] private Slider slider;
     private GameObject buttonPressed;
     private int roundCount = 0;
@@ -15,7 +17,7 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class CombatManager : MonoBehaviour
             if (buttonBehaviour.IsActive)
             {
                 buttonBehaviour.ClickOnTheButton();
+                enemyBehaviour.SetAction(enemyBehaviour.enemyActions[roundCount]);
+                Debug.Log("L'ennemi a " + enemyBehaviour.enemyActions[roundCount]);
                 playerArmor = buttonBehaviour.PlayerArmor;
                 playerAttack = buttonBehaviour.PlayerAttack;
                 if (isCharged)
@@ -44,7 +48,12 @@ public class CombatManager : MonoBehaviour
                 }
                 Debug.Log("Armure : " + playerArmor);
                 Debug.Log("Attaque : " + playerAttack);
-                balanceOfPower = (playerAttack / (1f * 10f)) - (1 / (1f * playerArmor));
+                if (enemyBehaviour.EnemyIsCountering)
+                {
+                    enemyBehaviour.EnemyAttack = playerAttack * 1.5f;
+                    playerAttack = playerAttack/2;
+                }
+                balanceOfPower = (playerAttack / (1f * enemyBehaviour.EnemyArmor)) - (enemyBehaviour.EnemyAttack / (1f * playerArmor));
                 Debug.Log("balanceOfPower : " + balanceOfPower);
                 RoundResult(balanceOfPower);
                 if (buttonBehaviour.IsCharging)
