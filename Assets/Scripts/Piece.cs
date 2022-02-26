@@ -16,11 +16,17 @@ public class Piece : MonoBehaviour
     }
     void Update()
     {
+        if (Click.IsClickingOn(leftDoor)) Debug.Log("left");
+        if (Click.IsClickingOn(rightDoor)) Debug.Log("right");
     }
 
     public void DisplayPiece()
     {
         linkedPiece.SetActive(true);
+    }
+    public void HidePiece()
+    {
+        linkedPiece.SetActive(false);
     }
 
 
