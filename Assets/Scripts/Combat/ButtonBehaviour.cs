@@ -7,7 +7,7 @@ public class ButtonBehaviour : MonoBehaviour
     [SerializeField] private bool isDefense, isAttack;
     public bool IsDefense { get { return isDefense; } }
     public bool IsAttack { get { return isAttack; } }
-    [SerializeField] private Sprite spriteBoutonUtilise;
+    [SerializeField] private Sprite spriteBoutonUtilise,spriteBoutonPossible;
     private SpriteRenderer spriteBouton;
     private int playerArmor, playerAttack;
     public int PlayerArmor { get { return playerArmor; } set { playerArmor = value; } }
@@ -25,7 +25,11 @@ public class ButtonBehaviour : MonoBehaviour
         spriteBouton = gameObject.GetComponentInParent<SpriteRenderer>();
     }
 
-
+    private void OnEnable()
+    {
+        isActive = true;
+        spriteBouton.sprite = spriteBoutonPossible;
+    }
     public void ClickOnTheButton()
     {
         //Debug.Log("La capacité est en train de charger " + isCharging);

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class CombatManager : MonoBehaviour
 {
+    public bool isInCombat = false;
+
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
     [SerializeField] private Slider slider;
@@ -21,10 +23,25 @@ public class CombatManager : MonoBehaviour
     {
         enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
     }
-
+    private void OnEnable()
+    {
+        slider.value = slider.maxValue / 2;
+        roundCount = 0;
+    }
+    public void StartCombat()
+    {
+        isInCombat = true;
+        gameObject.SetActive(true);
+    }
+    public void StopCombat()
+    {
+        isInCombat = false;
+        gameObject.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
+        if (!isInCombat) return;
         buttonPressed = Click.IsClickingOn(actionButtons);
         if (buttonPressed == null) return;
         ButtonBehaviour buttonBehaviour = buttonPressed.GetComponent<ButtonBehaviour>();
@@ -81,6 +98,7 @@ public class CombatManager : MonoBehaviour
 
     private void EndFight()
     {
+        StopCombat();
         float resultsFight = slider.value;
         if (resultsFight < -0.5)
         {
