@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bandage
   type: 0
-  pickUpDialogue: Prout
+  choosingDialogue: Debule ctohorstop
+  pickUpDialogue: 'Ahhhh bah yess
+
+'
   sprite: {fileID: 21300000, guid: 4b31cc9aa1cb4f54ea3ff39879f2ade0, type: 3}
