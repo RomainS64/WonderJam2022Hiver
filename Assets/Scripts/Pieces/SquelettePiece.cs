@@ -19,7 +19,7 @@ public class SquelettePiece : Piece
         actionDone = false;
         spriteArmor.SetActive(true);
         SetAttackSprite();
-        FindObjectOfType<Choise>().StartChoise("Ce squelette n'aura surrement plus besoin de son armure", "Prendre l'armure", "Laisser l'armure",DontTake,Take);
+        FindObjectOfType<Choise>().StartChoise(DIALOGUES.squeletteQuestion, DIALOGUES.squeletteRep1, DIALOGUES.squeletteRep2, DontTake,Take);
     }
     private void Update()
     {

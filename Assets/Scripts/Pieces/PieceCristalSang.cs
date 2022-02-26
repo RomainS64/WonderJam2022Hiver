@@ -25,7 +25,6 @@ public class PieceCristalSang : Piece
     private void Start()
     {
         life = FindObjectOfType<Life>();
-        spriteRendererCristalSang = cristalObject.GetComponent<SpriteRenderer>();
 
         base.Start();
     }

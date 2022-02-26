@@ -23,8 +23,8 @@ static public class DIALOGUES
 
     ///PIECE SQUELETTE
     static public string squeletteQuestion = "Ce squelette porte une armure. peut-être qu'elle pourra m'être utile.";
-    static public string squeletteRep1 = "Prendre l'armure";
-    static public string squeletteRep2 = "Laisser l'armure";
+    static public string squeletteRep2 = "Prendre l'armure";
+    static public string squeletteRep1 = "Laisser l'armure";
 
     static public string squelettePrendre = "C'est humide et très usé... mais ça devrait suffir pour me protéger.";
     static public string squeletteLaisser = "Pas question que je touche à cette chose.";
