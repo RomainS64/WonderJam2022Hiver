@@ -81,11 +81,4 @@ public class EnemyBehaviour : MonoBehaviour
                 break;
         }
     }
-
-    public enum EnemyType
-    {
-        Alien,
-        Robotector,
-        Curseby
-    }
 }

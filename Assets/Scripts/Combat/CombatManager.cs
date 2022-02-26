@@ -25,7 +25,7 @@ public class CombatManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        slider.value = slider.maxValue / 2;
+        slider.value = 0;
         roundCount = 0;
     }
     public void StartCombat()
