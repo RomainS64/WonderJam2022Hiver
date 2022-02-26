@@ -40,6 +40,7 @@ public class ItemWorld : MonoBehaviour
 
             FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(itemComp.type);
             spriteRenderer.sprite = null;
+            //TODO : Display dialogue
             //Destroy(gameObject);
         }
     }
