@@ -30,6 +30,7 @@ public class Piece : MonoBehaviour
     }
     protected void Update()
     {
+        SetThinkingSprite();
         if (Click.IsClickingOn(leftDoor)) pieceManager.GoNextPiece(true);
         if (Click.IsClickingOn(rightDoor)) pieceManager.GoNextPiece(false);
     }
