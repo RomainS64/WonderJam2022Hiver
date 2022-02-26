@@ -7,8 +7,10 @@ public class CombatManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
-    private EnemyBehaviour enemyBehaviour;
     [SerializeField] private Slider slider;
+
+    private EnemyBehaviour enemyBehaviour;
+    
     private GameObject buttonPressed;
     private int roundCount = 0;
     private float balanceOfPower;
@@ -24,45 +26,48 @@ public class CombatManager : MonoBehaviour
     void Update()
     {
         buttonPressed = Click.IsClickingOn(actionButtons);
-        if (buttonPressed != null)
+        if (buttonPressed == null) return;
+        ButtonBehaviour buttonBehaviour = buttonPressed.GetComponent<ButtonBehaviour>();
+        if (!buttonBehaviour.IsActive) return;
+
+        buttonBehaviour.ClickOnTheButton();
+
+        enemyBehaviour.SetAction(enemyBehaviour.enemyActions[roundCount]);
+
+        Debug.Log("L'ennemi utilise " + enemyBehaviour.enemyActions[roundCount]);
+
+        playerArmor = buttonBehaviour.PlayerArmor;
+        playerAttack = buttonBehaviour.PlayerAttack;
+
+        if (isCharged)
         {
-            ButtonBehaviour buttonBehaviour = buttonPressed.GetComponent<ButtonBehaviour>();
-            if (buttonBehaviour.IsActive)
+            if (buttonBehaviour.IsDefense)
             {
-                buttonBehaviour.ClickOnTheButton();
-                enemyBehaviour.SetAction(enemyBehaviour.enemyActions[roundCount]);
-                Debug.Log("L'ennemi a " + enemyBehaviour.enemyActions[roundCount]);
-                playerArmor = buttonBehaviour.PlayerArmor;
-                playerAttack = buttonBehaviour.PlayerAttack;
-                if (isCharged)
-                {
-                    if (buttonBehaviour.IsDefense)
-                    {
-                        playerArmor *= 2;
-                    }
-                    else if (buttonBehaviour.IsAttack)
-                    {
-                        playerAttack *= 2;
-                    }
-                    isCharged = false;
-                }
-                Debug.Log("Armure Joueur : " + playerArmor + " Armure Ennemi : " + enemyBehaviour.EnemyArmor);
-                Debug.Log("Attaque Joueur : " + playerAttack + " Attaque Ennemi : " + enemyBehaviour.EnemyAttack);
-                if (enemyBehaviour.EnemyIsCountering)
-                {
-                    enemyBehaviour.EnemyAttack = playerAttack * 1.5f;
-                    playerAttack = playerAttack/2;
-                }
-                balanceOfPower = (playerAttack / (1f * enemyBehaviour.EnemyArmor)) - (enemyBehaviour.EnemyAttack / (1f * playerArmor));
-                Debug.Log("balanceOfPower : " + balanceOfPower);
-                RoundResult(balanceOfPower);
-                if (buttonBehaviour.IsCharging)
-                {
-                    isCharged = true;
-                    buttonBehaviour.IsCharging = false;
-                }
+                playerArmor *= 2;
             }
+            else if (buttonBehaviour.IsAttack)
+            {
+                playerAttack *= 2;
+            }
+            isCharged = false;
         }
+        Debug.Log("Armure Joueur : " + playerArmor + " Armure Ennemi : " + enemyBehaviour.EnemyArmor);
+        Debug.Log("Attaque Joueur : " + playerAttack + " Attaque Ennemi : " + enemyBehaviour.EnemyAttack);
+        if (enemyBehaviour.EnemyIsCountering)
+        {
+            enemyBehaviour.EnemyAttack = playerAttack * 1.5f;
+            playerAttack = playerAttack / 2;
+        }
+        balanceOfPower = (playerAttack / (1f * enemyBehaviour.EnemyArmor)) - (enemyBehaviour.EnemyAttack / (1f * playerArmor));
+        Debug.Log("balanceOfPower : " + balanceOfPower);
+        RoundResult(balanceOfPower);
+        if (buttonBehaviour.IsCharging)
+        {
+            isCharged = true;
+            buttonBehaviour.IsCharging = false;
+        }
+
+
 
     }
 
