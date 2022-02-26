@@ -14,8 +14,8 @@ public class Fade : MonoBehaviour
    {
 
    }
-   IEnumerator FadeCoroutine(float fromAlpha, float toAlpha, float time, float timeBeforeDesactive)
+   /*IEnumerator FadeCoroutine(float fromAlpha, float toAlpha, float time, float timeBeforeDesactive)
     {
 
-    }
+    }*/
 }
