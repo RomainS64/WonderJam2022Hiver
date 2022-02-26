@@ -53,12 +53,7 @@ public class CombatManager : MonoBehaviour
         }
         Debug.Log("Armure Joueur : " + playerArmor + " Armure Ennemi : " + enemyBehaviour.EnemyArmor);
         Debug.Log("Attaque Joueur : " + playerAttack + " Attaque Ennemi : " + enemyBehaviour.EnemyAttack);
-        if (enemyBehaviour.EnemyIsCountering)
-        {
-            enemyBehaviour.EnemyAttack = playerAttack * 1.5f;
-            playerAttack = playerAttack / 2;
-        }
-        balanceOfPower = (playerAttack / (1f * enemyBehaviour.EnemyArmor)) - (enemyBehaviour.EnemyAttack / (1f * playerArmor));
+        balanceOfPower = (playerAttack /(float)enemyBehaviour.EnemyArmor) - (enemyBehaviour.EnemyAttack / (float)playerArmor);
         Debug.Log("balanceOfPower : " + balanceOfPower);
         RoundResult(balanceOfPower);
         if (buttonBehaviour.IsCharging)
@@ -66,15 +61,14 @@ public class CombatManager : MonoBehaviour
             isCharged = true;
             buttonBehaviour.IsCharging = false;
         }
-
-
-
     }
 
     private void RoundResult(float balanceOfPower)
     {
+        if(balanceOfPower<0)ScreenShake.Shake(0.3f, 1.5f);
+        if (balanceOfPower==0) ScreenShake.Shake(0.3f, 0.7f);
         float balanceOfPowerSlider;
-        balanceOfPowerSlider = balanceOfPower / 5;
+        balanceOfPowerSlider = balanceOfPower / 3;
         
         UpdateBalanceOfPowerBarre(balanceOfPowerSlider);
 

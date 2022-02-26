@@ -31,12 +31,8 @@ static public class DIALOGUES
     static public string squeletteLaisser = "Je devrais le laisser comme ca.";
 
     //TRESOR
-    static public string tresorQuestion = "Un coffre... je devrais peut-etre regarder ce qu'il y a à l'intérieur";
-    static public string tresorRep1 = "Prendre le trésor";
-    static public string tresorRep2 = "Laisser le trésor";
+    static public string tresorParTerre = "Qu'est-ce que c'est ?";
 
-    static public string tresorPrendre1 = "Ces artéfacts vont surrement m'etre utile.";
-    static public string tresorPrendre2 = "AAAAAAAh ! Un mimmic..... J'était pourtant sur que ca n'existait pas...";
-
-    static public string tresorLaisser = "Je le sens mal. Je ne devrais pas l'ouvrir.";
+    static public string tresorRep1 = "Prendre";
+    static public string tresorRep2 = "Laisser";
 }

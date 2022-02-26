@@ -12,6 +12,11 @@ public class ItemObject : ScriptableObject
 
     public string itemName;
     public ItemType type;
+
+    [Multiline(5)]
+    public string choosingDialogue;
+
+    [Multiline(5)]
     public string pickUpDialogue;
     public Sprite sprite;
 }
