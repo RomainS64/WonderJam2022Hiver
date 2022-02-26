@@ -8,12 +8,16 @@ public class Piece : MonoBehaviour
     public GameObject leftDoor;
     public GameObject rightDoor;
 
-    private PieceManager pieceManager;
-    void Start()
+    protected PieceManager pieceManager;
+    protected void Start()
     {
         pieceManager = FindObjectOfType<PieceManager>();
     }
-    void Update()
+    protected void OnEnable()
+    {
+        FindObjectOfType<Pensees>().StartPensee("Cette piece est vide...");
+    }
+    protected void Update()
     {
         if (Click.IsClickingOn(leftDoor)) pieceManager.GoNextPiece(true);
         if (Click.IsClickingOn(rightDoor)) pieceManager.GoNextPiece(false);

@@ -6,7 +6,7 @@ public class Click : MonoBehaviour
 {
     public static bool IsClickingOn(GameObject MyObj)
     {
-        if (Input.GetMouseButtonDown(0) && !Fade.isInFade)
+        if (Input.GetMouseButtonDown(0) && !Fade.isInFade && !Pensees.isInPensee)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -19,7 +19,7 @@ public class Click : MonoBehaviour
     }
     public static GameObject IsClickingOn(GameObject[] MyObjs)
     {
-        if (Input.GetMouseButtonDown(0) && !Fade.isInFade)
+        if (Input.GetMouseButtonDown(0) && !Fade.isInFade && !Pensees.isInPensee)
         {
             
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

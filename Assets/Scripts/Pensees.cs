@@ -12,8 +12,12 @@ public class Pensees : MonoBehaviour
     [SerializeField] private Text penseeTxt;
     private IEnumerator pensee;
     private string text;
+    private Life life;
+    private Mental mental;
     private void Start()
     {
+        life = FindObjectOfType<Life>();
+        mental = FindObjectOfType<Mental>();
         penseeCanvas.SetActive(false);
         text = penseeTxt.text;
     }
@@ -25,6 +29,7 @@ public class Pensees : MonoBehaviour
         pensee = PenseeRoutine();
         StartCoroutine(pensee);
     }
+   
     IEnumerator PenseeRoutine()
     {
         yield return new WaitForSeconds(0.5f);
