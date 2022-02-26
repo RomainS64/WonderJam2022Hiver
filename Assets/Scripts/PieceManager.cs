@@ -39,9 +39,9 @@ public class PieceManager : MonoBehaviour
             rightPiece.DisplayPiece();
             GeneratePatern(rightPiece);
         }
-        Debug.Log(pieceHistory.Count);
         FindObjectOfType<Zoom>().StartZoom(5, 5, 0.1f);
         FindObjectOfType<Fade>().StartFade(1, 0, 0.5f,0);
+        FindObjectOfType<Pensees>().StartPensee("je suis entrain de parcourir la "+ pieceHistory.Count+" eme piece");
     }
     private void GeneratePatern(Piece newPiece)
     {
