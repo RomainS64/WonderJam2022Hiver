@@ -32,7 +32,4 @@ public class Piece : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-
-
 }
