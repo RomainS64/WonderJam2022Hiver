@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    [SerializeField]protected Sprite attackSprite, thinkingSprite;
+    [SerializeField]private SpriteRenderer spriteRenderer;
     protected bool actionDone = false;
 
     public GameObject leftDoor;
@@ -13,6 +15,14 @@ public class Piece : MonoBehaviour
     protected void Start()
     {
         pieceManager = FindObjectOfType<PieceManager>();
+    }
+    protected void SetAttackSprite()
+    {
+        spriteRenderer.sprite = attackSprite;
+    }
+    protected void SetThinkingSprite()
+    {
+        spriteRenderer.sprite = thinkingSprite;
     }
     protected void OnEnable()
     {
@@ -32,7 +42,4 @@ public class Piece : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
-
-
 }

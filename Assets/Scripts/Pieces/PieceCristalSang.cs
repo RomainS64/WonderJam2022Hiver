@@ -4,50 +4,56 @@ using UnityEngine;
 
 public class PieceCristalSang : Piece
 {
-    [SerializeField] private Transform tresorSpawnTransform;
+    [SerializeField] private float lifeStolenRatioFromCurrentHealth;
+    [SerializeField] private float lifeGaveBackRatio;
+
+    [SerializeField] private GameObject cristalObject;
     [SerializeField] private Sprite cristalEnabledSprite;
     [SerializeField] private Sprite cristalDisabledSprite;
 
+    [SerializeField]
+    private SpriteRenderer spriteRendererCristalSang;
+
     private Life life;
-    private SpriteRenderer spriteRenderer;
 
-    private float lifeStolen;
+    private float totalLifeStolenFromCristal;
     private bool isCristalActivated;
+    private bool hasCristalBeenTouched;
 
-    private bool isClicked = false;
+    private bool isClickedPopupShowing = false;
 
     private void Start()
     {
         life = FindObjectOfType<Life>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRendererCristalSang = cristalObject.GetComponent<SpriteRenderer>();
+
         base.Start();
     }
 
-    //Le joueur arrive dans une salle. Un objet est étendue sur le sol. Le joueur peut l'ignorer, on bien cliquer dessus pour savoir ce que c'est.
-    //Choix : description de l'item. Le prendre ?
     protected void OnEnable()
     {
-        if(isCristalActivated)
-        {
-            spriteRenderer.sprite = cristalEnabledSprite;
-        }
-        else
-        {
-            spriteRenderer.sprite = cristalDisabledSprite;
-        }
-
+        hasCristalBeenTouched = false;
+        isClickedPopupShowing = false;
         actionDone = true;
 
-        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorParTerre);
+        UpdateCristalIllumination();
     }
     private void Update()
     {
-        //if (itemWorldInThePiece.isClicked) return;
+        if (isClickedPopupShowing) return;
 
-        if (Click.IsClickingOn(gameObject) && !isClicked)
+        if (Click.IsClickingOn(cristalObject) && !hasCristalBeenTouched)
         {
-            isClicked = true;
-            //FindObjectOfType<Choise>().StartChoise(itemComp.choosingDialogue, DIALOGUES.tresorRep1, DIALOGUES.tresorRep2, DontTake, Take);
+            isClickedPopupShowing = true;
+
+            if(isCristalActivated)
+            {
+                FindObjectOfType<Choise>().StartChoise(DIALOGUES.cristalTrouveEnabled, DIALOGUES.cristalRep1, DIALOGUES.cristalRep2, DontTouch, Touch); ;
+            }
+            else
+            {
+                FindObjectOfType<Choise>().StartChoise(DIALOGUES.cristalTrouveDisabled, DIALOGUES.cristalRep1, DIALOGUES.cristalRep2, DontTouch, Touch); ;
+            }
         }
 
         if (Click.IsClickingOn(leftDoor))
@@ -61,28 +67,47 @@ public class PieceCristalSang : Piece
         }
     }
 
-    private void DontTake()
+    private void DontTouch()
     {
-        isClicked = false;
-
-        //FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorLaisser);
+        isClickedPopupShowing = false;
     }
 
-    private void Take()
+    private void Touch()
     {
-        isClicked = false;
+        isClickedPopupShowing = false;
+        hasCristalBeenTouched = true;
 
-        //FindObjectOfType<Pensees>().StartPensee(itemComp.pickUpDialogue);
+        if (isCristalActivated)
+        {
+            life.Heal(Mathf.CeilToInt(totalLifeStolenFromCristal * lifeGaveBackRatio));
 
-        //FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(itemComp.type);
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.cristalToucheToDisable);
 
-        MakeAnEffect();
+            isCristalActivated = false;
+            totalLifeStolenFromCristal = 0;
+        }
+        else
+        {
+            totalLifeStolenFromCristal = life.CurrentLife * lifeStolenRatioFromCurrentHealth;
+            life.TakeDamage(Mathf.CeilToInt(totalLifeStolenFromCristal));
 
-        Destroy(gameObject);
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.cristalToucheToEnable);
+
+            isCristalActivated = true;
+        }
+
+        UpdateCristalIllumination();
     }
 
-    private void MakeAnEffect()
+    private void UpdateCristalIllumination()
     {
-
+        if(isCristalActivated)
+        {
+            spriteRendererCristalSang.sprite = cristalEnabledSprite;
+        }
+        else
+        {
+            spriteRendererCristalSang.sprite = cristalDisabledSprite;
+        }
     }
 }

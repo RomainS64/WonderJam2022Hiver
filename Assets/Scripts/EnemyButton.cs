@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyButton : MonoBehaviour
 {
-    [SerializeField] private Sprite spriteBoutonUtilise;
+    [SerializeField] private Sprite spriteBoutonUtilise,spriteBoutonPossible;
     private SpriteRenderer spriteBouton;
 
     // Start is called before the first frame update
@@ -12,7 +12,10 @@ public class EnemyButton : MonoBehaviour
     {
         spriteBouton = gameObject.GetComponentInParent<SpriteRenderer>();
     }
-
+    private void OnEnable()
+    {
+        spriteBouton.sprite = spriteBoutonPossible;
+    }
 
     public void ClickOnTheButton()
     {
