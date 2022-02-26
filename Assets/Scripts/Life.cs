@@ -8,6 +8,7 @@ public class Life : MonoBehaviour
     [SerializeField] private int maxLife;
     [SerializeField] private Slider slider;
     private int currentLife;
+    public int CurrentLife => currentLife;
    
     void Start()
     {
@@ -30,6 +31,23 @@ public class Life : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentLife -= damage;
+
+        if (currentLife <= 0)
+        {
+            //TODO : DIE
+        }
+
+        slider.value = currentLife;
+    }
+    public void Heal(int healAmount)
+    {
+        currentLife += healAmount;
+
+        if(currentLife > maxLife)
+        {
+            currentLife = maxLife;
+        }
+
         slider.value = currentLife;
     }
 }
