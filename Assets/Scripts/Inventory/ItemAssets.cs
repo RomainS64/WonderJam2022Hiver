@@ -27,4 +27,18 @@ public class ItemAssets : MonoBehaviour
         Debug.LogWarning("ItemAssets.cs , GetItemObjectOfType(ItemObject.ItemType) : Aucun objet de ce type !!!");
         return null;
     }
+
+    public ItemObject.ItemType GetRandomItemType()
+    {
+        int randomIntemIndex = Random.Range(0, itemObjects.Length);
+
+        return itemObjects[randomIntemIndex].type;
+    }
+
+    public ItemObject GetRandomItem()
+    {
+        int randomIntemIndex = Random.Range(0, itemObjects.Length);
+
+        return itemObjects[randomIntemIndex];
+    }
 }

@@ -10,18 +10,19 @@ public class PlayerTestForInventory : MonoBehaviour
     {
         inventory = new Inventory();
 
-        ItemWorld.SpawnItemWorld(new Vector3(1, 2, 0), ItemObject.ItemType.Veste);
-        ItemWorld.SpawnItemWorld(new Vector3(3, 2, 0), ItemObject.ItemType.OrbeEtrange);
-        ItemWorld.SpawnItemWorld(new Vector3(4, 4, 0), ItemObject.ItemType.Bandage);
-        ItemWorld.SpawnItemWorld(new Vector3(1, -1, 0), ItemObject.ItemType.Bandage);
+        //Debug for testing purposes
+        //ItemWorld.SpawnItemWorld(new Vector3(1, 2, 0), ItemObject.ItemType.Veste);
+        //ItemWorld.SpawnItemWorld(new Vector3(3, 2, 0), ItemObject.ItemType.OrbeEtrange);
+        //ItemWorld.SpawnItemWorld(new Vector3(4, 4, 0), ItemObject.ItemType.Bandage);
+        //ItemWorld.SpawnItemWorld(new Vector3(1, -1, 0), ItemObject.ItemType.Bandage);
     }
 
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            inventory.RemoveItemOfType(ItemObject.ItemType.Bandage);
-            inventory.DisplayInventoryInConsole();
-        }
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.P))
+    //    {
+    //        inventory.RemoveItemOfType(ItemObject.ItemType.Bandage);
+    //        inventory.DisplayInventoryInConsole();
+    //    }
+    //}
 }

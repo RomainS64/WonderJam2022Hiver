@@ -4,24 +4,33 @@ using UnityEngine;
 
 public class TresorPiece : Piece
 {
+    [SerializeField] private Transform tresorSpawnTransform;
+
     [SerializeField] private int mimmiqueDamage;
     [SerializeField] private int artefactGainMin,artefactGainMax;
     private bool actionDone = false;
     private Life life;
+    private ItemWorld itemWorldInThePiece;
     private void Start()
     {
         life = FindObjectOfType<Life>();
         base.Start();
     }
+
+    //Le joueur arrive dans une salle. Un objet est étendue sur le sol. Le joueur peut l'ignorer, on bien cliquer dessus pour savoir ce que c'est.
+    //Choix : description de l'item. Le prendre ?
     protected void OnEnable()
     {
-        actionDone = false;
+        itemWorldInThePiece = ItemWorld.SpawnItemWorld(tresorSpawnTransform, ItemAssets.Instance.GetRandomItemType());
 
-        FindObjectOfType<Choise>().StartChoise(DIALOGUES.tresorQuestion,DIALOGUES.tresorRep1,DIALOGUES.tresorRep2, DontTake, Take);
+        actionDone = true;
+
+        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorParTerre);
     }
     private void Update()
     {
-        if (!actionDone) return;
+        if (itemWorldInThePiece.isClicked) return;
+
         if (Click.IsClickingOn(leftDoor))
         {
             pieceManager.GoNextPiece(true);
@@ -30,30 +39,6 @@ public class TresorPiece : Piece
         if (Click.IsClickingOn(rightDoor))
         {
             pieceManager.GoNextPiece(false);
-
         }
-    }
-    public void Take()
-    {
-        
-        
-        if (Random.Range(0, 2) > 0)
-        {
-            ScreenShake.Shake(0.3f, 1f);
-            life.TakeDamage(mimmiqueDamage);
-            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorPrendre2);
-        }
-        else
-        {
-            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorPrendre1);
-        }
-            
-
-        actionDone = true;
-    }
-    public void DontTake()
-    {
-        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorLaisser);
-        actionDone = true;
     }
 }

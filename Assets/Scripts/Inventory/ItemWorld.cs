@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemWorld : MonoBehaviour
 {
-    private bool hasBeenClicked = false;
+    public bool isClicked = false;
     public SpriteRenderer spriteRenderer;
 
     private ItemObject itemComp;
@@ -16,12 +16,13 @@ public class ItemWorld : MonoBehaviour
         } 
     }
 
-    public static ItemWorld SpawnItemWorld(Vector3 position, ItemObject.ItemType itemToSpawnType)
+    public static ItemWorld SpawnItemWorld(Transform transformSpawnPoint, ItemObject.ItemType itemToSpawnType)
     {
         Transform transf = Instantiate(
             ItemAssets.Instance.itemWorldPrefab,
-            position,
-            Quaternion.identity);
+            transformSpawnPoint.position,
+            Quaternion.identity,
+            transformSpawnPoint);
 
         ItemWorld itemWorld = transf.GetComponent<ItemWorld>();
         itemWorld.ItemComp = ItemAssets.Instance.GetItemObjectOfType(itemToSpawnType);
@@ -32,16 +33,48 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
-    private void OnMouseDown()
+    private void Update()
     {
-        if(!hasBeenClicked)
+        if (Click.IsClickingOn(gameObject) && !isClicked)
         {
-            hasBeenClicked = true;
-
-            FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(itemComp.type);
-            spriteRenderer.sprite = null;
-            //TODO : Display dialogue
-            //Destroy(gameObject);
+            isClicked = true;
+            FindObjectOfType<Choise>().StartChoise(itemComp.choosingDialogue, DIALOGUES.tresorRep1, DIALOGUES.tresorRep2, DontTake, Take);
         }
     }
+    private void DontTake()
+    {
+        isClicked = false;
+
+        //FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorLaisser);
+    }
+
+    private void Take()
+    {
+        isClicked = false;
+
+        FindObjectOfType<Pensees>().StartPensee(itemComp.pickUpDialogue);
+
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(itemComp.type);
+
+        MakeAnEffect();
+
+        Destroy(gameObject);
+    }
+
+    private void MakeAnEffect()
+    {
+        switch (itemComp.type)
+        {
+            case ItemObject.ItemType.Bandage:
+                break;
+            case ItemObject.ItemType.Veste:
+                break;
+            case ItemObject.ItemType.OrbeEtrange:
+                break;
+            default:
+                Debug.Log("No effect assigned to object in ItemWorld.cs MakeAnEffect() !");
+                break;
+        }
+    }
+
 }
