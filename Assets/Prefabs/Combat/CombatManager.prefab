@@ -97,6 +97,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 151
       objectReference: {fileID: 0}
+    - target: {fileID: 1713298123721276257, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonPossible
+      value: 
+      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
     - target: {fileID: 2241329357128719284, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: enemy
       value: 
@@ -129,6 +133,10 @@ PrefabInstance:
       propertyPath: actionButtons.Array.data[4]
       value: 
       objectReference: {fileID: 3340061838549178744}
+    - target: {fileID: 2423955599633014447, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonPossible
+      value: 
+      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
     - target: {fileID: 2617877837248048086, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -143,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2617877837248048086, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2617877837248048086, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_LocalRotation.w
@@ -185,15 +193,27 @@ PrefabInstance:
       propertyPath: spriteBoutonPossible
       value: 
       objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+    - target: {fileID: 6209358733784266173, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonPossible
+      value: 
+      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
     - target: {fileID: 6393438903970805048, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_Name
       value: CombatInterface
       objectReference: {fileID: 0}
+    - target: {fileID: 6679891624759913468, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonPossible
+      value: 
+      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
     - target: {fileID: 6703937111938279984, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
       objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
     - target: {fileID: 7487975696563412197, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonPossible
+      value: 
+      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+    - target: {fileID: 7883852574810532837, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
       objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
@@ -321,15 +341,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7932868269199728604, guid: 16b06e51990bbb7498ac2c1e4d1ed704, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7932868269199728604, guid: 16b06e51990bbb7498ac2c1e4d1ed704, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7932868269199728604, guid: 16b06e51990bbb7498ac2c1e4d1ed704, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7932868269199728604, guid: 16b06e51990bbb7498ac2c1e4d1ed704, type: 3}
       propertyPath: m_LocalRotation.w
