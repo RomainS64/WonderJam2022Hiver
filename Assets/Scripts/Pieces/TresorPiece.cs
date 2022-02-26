@@ -36,10 +36,18 @@ public class TresorPiece : Piece
     public void Take()
     {
         
-        ScreenShake.Shake(0.3f, 1f);
-        life.TakeDamage(mimmiqueDamage);
-
-        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorPrendre2);
+        
+        if (Random.Range(0, 2) > 0)
+        {
+            ScreenShake.Shake(0.3f, 1f);
+            life.TakeDamage(mimmiqueDamage);
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorPrendre2);
+        }
+        else
+        {
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.tresorPrendre1);
+        }
+            
 
         actionDone = true;
     }

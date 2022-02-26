@@ -31,7 +31,7 @@ static public class DIALOGUES
     static public string squeletteLaisser = "Je devrais le laisser comme ca.";
 
     //TRESOR
-    static public string tresorQuestion = "Ce squelette n'aura surrement plus besoin de son armure.";
+    static public string tresorQuestion = "Un coffre... je devrais peut-etre regarder ce qu'il y a à l'intérieur";
     static public string tresorRep1 = "Prendre le trésor";
     static public string tresorRep2 = "Laisser le trésor";
 
