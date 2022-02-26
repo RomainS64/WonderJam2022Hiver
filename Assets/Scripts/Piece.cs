@@ -8,25 +8,25 @@ public class Piece : MonoBehaviour
     [SerializeField] GameObject leftDoor;
     [SerializeField] GameObject rightDoor;
 
-    private GameObject linkedPiece;
+    private PieceManager pieceManager;
     void Start()
     {
-        //Pour le moment le GameObject est dirrectement lié au script, on verra par la suite si on le déplace;
-        linkedPiece = gameObject; 
+
+        pieceManager = FindObjectOfType<PieceManager>();
     }
     void Update()
     {
-        if (Click.IsClickingOn(leftDoor)) Debug.Log("left");
-        if (Click.IsClickingOn(rightDoor)) Debug.Log("right");
+        if (Click.IsClickingOn(leftDoor)) pieceManager.GoNextPiece(true);
+        if (Click.IsClickingOn(rightDoor)) pieceManager.GoNextPiece(false);
     }
 
     public void DisplayPiece()
     {
-        linkedPiece.SetActive(true);
+        gameObject.SetActive(true);
     }
     public void HidePiece()
     {
-        linkedPiece.SetActive(false);
+        gameObject.SetActive(false);
     }
 
 
