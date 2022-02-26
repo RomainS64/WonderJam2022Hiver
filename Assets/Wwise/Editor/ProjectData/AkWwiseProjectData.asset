@@ -345,8 +345,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 18dbda0abb4d23489b7d8dfc62b12be5
     GuidInternal: 
-    m_lastTime: -8585557085507909642
-    List: []
+    m_lastTime: -8585557019857656428
+    List:
+    - name: New_SoundBank
+      guid: 3fab947455fc674f9a8b3c14c7222008
+      id: 4072029455
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 18dbda0abb4d23489b7d8dfc62b12be5
+      - ElementName: New_SoundBank
+        ObjectType: 7
+        guid: 3fab947455fc674f9a8b3c14c7222008
+      Path: SoundBanks\Default Work Unit\New_SoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -359,8 +373,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: c5dad011c2f9e842a25f187b3492a3e5
     GuidInternal: 
-    m_lastTime: -8585557085508191325
-    List: []
+    m_lastTime: -8585557019864182436
+    List:
+    - name: playProut
+      guid: dcdb6bc336da21449d9e9bbfaa929cd2
+      id: 3783393979
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c5dad011c2f9e842a25f187b3492a3e5
+      - ElementName: playProut
+        ObjectType: 3
+        guid: dcdb6bc336da21449d9e9bbfaa929cd2
+      Path: Events\Default Work Unit\playProut
+      maxAttenuation: 0
+      maxDuration: 1.264422
+      minDuration: 1.264422
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
