@@ -46,8 +46,8 @@ public class CombatManager : MonoBehaviour
                     }
                     isCharged = false;
                 }
-                Debug.Log("Armure : " + playerArmor);
-                Debug.Log("Attaque : " + playerAttack);
+                Debug.Log("Armure Joueur : " + playerArmor + " Armure Ennemi : " + enemyBehaviour.EnemyArmor);
+                Debug.Log("Attaque Joueur : " + playerAttack + " Attaque Ennemi : " + enemyBehaviour.EnemyAttack);
                 if (enemyBehaviour.EnemyIsCountering)
                 {
                     enemyBehaviour.EnemyAttack = playerAttack * 1.5f;
@@ -69,17 +69,9 @@ public class CombatManager : MonoBehaviour
     private void RoundResult(float balanceOfPower)
     {
         float balanceOfPowerSlider;
-        balanceOfPowerSlider = balanceOfPower * 1.5f / 100;
-        if (balanceOfPower < 0)
-        {
-            //Barre Diminue
-            DecreaseBalanceOfPowerBarre(balanceOfPowerSlider);
-        }
-        else if (balanceOfPower > 0)
-        {
-            //Barre augmente
-            IncreaseBalanceOfPowerBarre(balanceOfPowerSlider);
-        }
+        balanceOfPowerSlider = balanceOfPower / 5;
+        
+        UpdateBalanceOfPowerBarre(balanceOfPowerSlider);
 
         roundCount++;
         if (roundCount >= 5)
@@ -93,7 +85,7 @@ public class CombatManager : MonoBehaviour
         float resultsFight = slider.value;
         if (resultsFight < -0.5)
         {
-
+            
         }
         else if (resultsFight > 0.5)
         {
@@ -105,12 +97,7 @@ public class CombatManager : MonoBehaviour
         }
     }
 
-    private void DecreaseBalanceOfPowerBarre(float balanceOfPowerSlider)
-    {
-        slider.value -= balanceOfPowerSlider;
-    }
-
-    private void IncreaseBalanceOfPowerBarre(float balanceOfPowerSlider)
+    private void UpdateBalanceOfPowerBarre(float balanceOfPowerSlider)
     {
         slider.value += balanceOfPowerSlider;
     }

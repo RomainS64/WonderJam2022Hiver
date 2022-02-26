@@ -18,7 +18,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         enemyActions = new EnemyAction[5] { EnemyAction.BigAttack, EnemyAction.SmallAttack, EnemyAction.Charge, EnemyAction.Defence, EnemyAction.Counter };
         Debug.Log(enemyActions[0] + " " + enemyActions[1] + " " + enemyActions[2] + " " + enemyActions[3] + " " + enemyActions[4]);
-        Shuffle(EnemyAction.Counter);
+        Shuffle(EnemyAction.Counter, 2);
         Debug.Log(enemyActions[0] + " " + enemyActions[1] + " " + enemyActions[2] + " " + enemyActions[3] + " " + enemyActions[4]);
     }
 
@@ -28,7 +28,7 @@ public class EnemyBehaviour : MonoBehaviour
         
     }
 
-    private void Shuffle(EnemyAction actionFixe)
+    private void Shuffle(EnemyAction actionFixe, int position)
     {
         for(int i = 0; i < enemyActions.Length - 1; i++)
         {
@@ -41,8 +41,8 @@ public class EnemyBehaviour : MonoBehaviour
         {
             if (enemyActions[i] == actionFixe)
             {
-                tempEnemyAction = enemyActions[2];
-                enemyActions[2] = enemyActions[i];
+                tempEnemyAction = enemyActions[position];
+                enemyActions[position] = enemyActions[i];
                 enemyActions[i] = tempEnemyAction;
             }
         }
@@ -58,6 +58,7 @@ public class EnemyBehaviour : MonoBehaviour
                 if (enemyIsCharged)
                 {
                     enemyAttack *= 2;
+                    enemyIsCharged = false;
                 }
                 break;
             case EnemyAction.SmallAttack:
@@ -66,6 +67,7 @@ public class EnemyBehaviour : MonoBehaviour
                 if (enemyIsCharged)
                 {
                     enemyAttack *= 2;
+                    enemyIsCharged = false;
                 }
                 break;
             case EnemyAction.Charge:
@@ -79,6 +81,7 @@ public class EnemyBehaviour : MonoBehaviour
                 if (enemyIsCharged)
                 {
                     enemyArmor *= 2;
+                    enemyIsCharged = false;
                 }
                 break;
             case EnemyAction.Counter:
@@ -96,5 +99,12 @@ public class EnemyBehaviour : MonoBehaviour
         Charge,
         Defence,
         Counter
+    }
+
+    public enum EnemyType
+    {
+        Alien,
+        Robotector,
+        Curseby
     }
 }

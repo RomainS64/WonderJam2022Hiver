@@ -33,13 +33,13 @@ public class ButtonBehaviour : MonoBehaviour
         {
             playerArmor = ArmorManager.GetArmor();
             playerAttack = 0;
-            Debug.Log("Defense");
+            Debug.Log("Joueur se défend");
         }
         else if (isAttack)
         {
             playerArmor = 1;
             playerAttack = AttackManager.GetAttack();
-            Debug.Log("Attaque");
+            Debug.Log("Joueur attaque");
         }
         else
         {
