@@ -21,4 +21,22 @@ static public class DIALOGUES
 
     static public string chienMechantCaresse1 = "Il m'a mordu !!!";
     static public string chienMechantAttaque1 = "Il l'a mérité.";
+
+    ///PIECE SQUELETTE
+    static public string squeletteQuestion = "Ce squelette n'aura surrement plus besoin de son armure.";
+    static public string squeletteRep1 = "Prendre l'armure";
+    static public string squeletteRep2 = "Laisser l'armure";
+
+    static public string squelettePrendre = "C'est encore tout humide..... mais ca devrait me protéger.";
+    static public string squeletteLaisser = "Je devrais le laisser comme ca.";
+
+    //TRESOR
+    static public string tresorQuestion = "Ce squelette n'aura surrement plus besoin de son armure.";
+    static public string tresorRep1 = "Prendre le trésor";
+    static public string tresorRep2 = "Laisser le trésor";
+
+    static public string tresorPrendre1 = "Ces artéfacts vont surrement m'etre utile.";
+    static public string tresorPrendre2 = "AAAAAAAh ! Un mimmic..... J'était pourtant sur que ca n'existait pas...";
+
+    static public string tresorLaisser = "Je le sens mal. Je ne devrais pas l'ouvrir.";
 }
