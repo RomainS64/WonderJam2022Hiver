@@ -1552,6 +1552,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 318154f2c0c90ee458b9f927af2b2479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 1497895443}
   rightDoor: {fileID: 605686760}
   chienDamage: 15
@@ -1744,7 +1747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &619003457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1757,6 +1760,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81369d7e891296f46b09dc5620d48bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSprite: {fileID: 0}
+  thinkingSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   leftDoor: {fileID: 423309124}
   rightDoor: {fileID: 202866885}
   tresorSpawnTransform: {fileID: 23702445}
@@ -2174,6 +2180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f13f95912c60c2346b3b0aa21d5e39f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSprite: {fileID: 0}
+  thinkingSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   leftDoor: {fileID: 1588044464}
   rightDoor: {fileID: 1332057412}
   combatManager: {fileID: 2055729015}
@@ -3359,6 +3368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb28c6c52ef4f247bf9c05d0f89586c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSprite: {fileID: 0}
+  thinkingSprite: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   leftDoor: {fileID: 712321684}
   rightDoor: {fileID: 747277214}
   squeletteDamageMental: 20
@@ -4266,6 +4278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27428730bd08cb946ac34f95457bd78f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSprite: {fileID: 21300000, guid: 99167c62363cb284ca1741aee037cbc3, type: 3}
+  thinkingSprite: {fileID: 21300000, guid: 4accb45879897ab42ada28f217648158, type: 3}
+  spriteRenderer: {fileID: 1534761222}
   leftDoor: {fileID: 2025284464}
   rightDoor: {fileID: 1003989281}
 --- !u!4 &1645042487
