@@ -7,7 +7,6 @@ public class ChienPiece : Piece
     [SerializeField] private int chienDamage, chienDamageMental;
     [SerializeField] GameObject spriteChien;
     private bool isDocile;
-    private bool actionDone = false;
     private bool firstPenseeDone = false;
 
     private Life life;

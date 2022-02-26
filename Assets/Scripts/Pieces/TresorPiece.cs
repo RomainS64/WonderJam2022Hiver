@@ -8,7 +8,7 @@ public class TresorPiece : Piece
 
     [SerializeField] private int mimmiqueDamage;
     [SerializeField] private int artefactGainMin,artefactGainMax;
-    private bool actionDone = false;
+
     private Life life;
     private ItemWorld itemWorldInThePiece;
     private void Start()
