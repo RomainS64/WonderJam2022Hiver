@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Statuette d'un Guide
   nomEstFeminin: 1
   type: 0
-  choosingDialogue: J'ai vu le symbole de cette statuette un peu partout icitte.
-  pickUpDialogue: "Cette fl\xE8che doit \xEAtre tr\xE8s importante."
+  choosingDialogue: "Cette statuette semble repr\xE9senter quelqu'un de tr\xE8s important."
+  pickUpDialogue: "La statuette est marqu\xE9e par un symbole. Je suis s\xFBr de
+    l'avoir vu auparavant."
   sprite: {fileID: 21300000, guid: 77f0201aa1666c84ca930f9c24d66230, type: 3}
