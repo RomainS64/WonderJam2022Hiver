@@ -93,5 +93,4 @@ public class Choise : MonoBehaviour
         if (chooseLeft) whatToDoLeft.Invoke();
         else whatToDoRight.Invoke();
     }
-
 }

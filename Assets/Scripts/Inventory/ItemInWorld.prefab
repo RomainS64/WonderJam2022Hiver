@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14341a2b4d61e394397128b04d267967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isClicked: 0
   spriteRenderer: {fileID: 0}
 --- !u!65 &6388951011115601712
 BoxCollider:
@@ -108,5 +109,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.28, y: 1.28, z: 0.2}
+  m_Size: {x: 10, y: 10, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
