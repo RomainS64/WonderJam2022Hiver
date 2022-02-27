@@ -6,13 +6,18 @@ using UnityEngine.UI;
 public class CombatManager : MonoBehaviour
 {
     public bool isInCombat = false;
+    public int damage;
 
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
+    [SerializeField] private Transform lootSpawnTransform1, lootSpawnTransform2;
     [SerializeField] private Slider slider;
 
+    private Life life;
+    private ItemWorld itemWorldInThePiece1, itemWorldInThePiece2;
+
     private EnemyBehaviour enemyBehaviour;
-    
+
     private GameObject buttonPressed;
     private int roundCount = 0;
     private float balanceOfPower;
@@ -21,10 +26,14 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        life = FindObjectOfType<Life>();
         enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
+        lootSpawnTransform1 = GameObject.Find("").transform;
+        lootSpawnTransform2 = GameObject.Find("").transform;
     }
     private void OnEnable()
     {
+        damage = 0;
         slider.value = 0;
         roundCount = 0;
     }
@@ -100,17 +109,34 @@ public class CombatManager : MonoBehaviour
     {
         StopCombat();
         float resultsFight = slider.value;
-        if (resultsFight < -0.5)
+        Debug.Log("Resultat du combat : " + resultsFight);
+        if (resultsFight < 0.5)
         {
-            
-        }
-        else if (resultsFight > 0.5)
-        {
-
+            int multiplier = -10;
+            if (resultsFight < -0.5)
+            {
+                multiplier -= 5;
+                if (resultsFight < -1)
+                {
+                    multiplier -= 5;
+                    if (resultsFight < -1.25)
+                    {
+                        multiplier -= 5;
+                    }
+                }
+            }
+            damage = (int)((slider.minValue + resultsFight) * multiplier);
+            Debug.Log("Dégât prit : " + damage);
+            life.TakeDamage(damage);
         }
         else
         {
-
+            itemWorldInThePiece1 = ItemWorld.SpawnItemWorld(lootSpawnTransform1, ItemAssets.Instance.GetRandomItemType());
+            if (resultsFight > 1)
+            {
+                itemWorldInThePiece2 = ItemWorld.SpawnItemWorld(lootSpawnTransform2, ItemAssets.Instance.GetRandomItemType());
+            }
+            Debug.Log("aucun dégât");
         }
     }
 
