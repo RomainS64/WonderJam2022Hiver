@@ -30,6 +30,12 @@ public class Mental : MonoBehaviour
     public void RecoverMental(int mental)
     {
         currentMental += mental;
+
+        if (currentMental > maxMental)
+        {
+            currentMental = maxMental;
+        }
+
         slider.value = currentMental;
     }
     public void TakeMentalDamage(int damage)
@@ -40,5 +46,13 @@ public class Mental : MonoBehaviour
         {
             FindObjectOfType<Mort>().DisplayMort(false);
         }
+    }
+
+    public void SetMental(int amount)
+    {
+        currentMental = amount;
+
+        slider.value = currentMental;
+
     }
 }

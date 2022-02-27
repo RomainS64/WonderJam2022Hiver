@@ -19,12 +19,14 @@ public class BlackScreenPiece : Piece
     protected string pieceChoiceRight;
 
     protected Life life;
+    protected Mental mental;
 
-    private int currentMessageDisplayed;
+    protected int currentMessageDisplayed;
 
     private void Start()
     {
         life = FindObjectOfType<Life>();
+        mental = FindObjectOfType<Mental>();
         base.Start();
     }
 
@@ -35,7 +37,7 @@ public class BlackScreenPiece : Piece
 
         actionDone = false;
 
-        Invoke("FadeInBackAndStartChoice", .3f);
+        Invoke("StartDialogues", .3f);
     }
     protected void Update()
     {
@@ -54,11 +56,11 @@ public class BlackScreenPiece : Piece
         FadeOut();
     }
 
-    private void FadeInBackAndStartChoice()
+    public virtual void StartDialogues()
     {
-        //FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue, pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
-
         FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.2f, -1);
+
+        FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue[0], pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
     }
 
     private void DisplayNextMessage()

@@ -48,5 +48,5 @@ Gauche / Droite : changer de salle random / Ils sont là, tout près, (gauche / dr
 Gauche / Droite : changer de salle random / Juste derrière, à (gauche / droite). J'en suis certain.
 *perte de 16N mental*
 
-Gauche / Droite : changer de salle random / AH ! -> changer de salle vers salle et monstre unique. Fin salle noire
+Gauche / Droite : changer de salle random / AAH ! -> changer de salle vers salle et monstre unique. Fin salle noire
 

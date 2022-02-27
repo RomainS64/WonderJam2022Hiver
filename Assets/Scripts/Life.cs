@@ -50,4 +50,12 @@ public class Life : MonoBehaviour
 
         slider.value = currentLife;
     }
+
+    public void SetHealth(int health)
+    {
+        currentLife = health;
+
+        slider.value = currentLife;
+
+    }
 }
