@@ -14,6 +14,10 @@ public class Fade : MonoBehaviour
      * @time: fade duration
      * @timeBeforeDesactive: time while fade Image stay active
      */
+    private void Start()
+    {
+        isInFade = false;
+    }
     public void StartFade(float fromAlpha,float toAlpha,float time,float timeBeforeDesactive)
    {
         if (fade != null) StopCoroutine(fade);

@@ -99,13 +99,77 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.431229
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2041918
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6020959
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 151
+      value: 201
+      objectReference: {fileID: 0}
+    - target: {fileID: 952303215, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713298123721276257, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1713298123721276257, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d06e775e7920d64da4c85f1fcfc7ef8, type: 3}
     - target: {fileID: 2241329357128719284, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: enemy
       value: 
@@ -139,9 +203,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3340061838549178744}
     - target: {fileID: 2423955599633014447, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2423955599633014447, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 5b3b8bb353ed57940a08bc4a596a7bf2, type: 3}
     - target: {fileID: 2617877837248048086, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -187,41 +255,89 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2686934837728960591, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686934837728960591, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d06e775e7920d64da4c85f1fcfc7ef8, type: 3}
+    - target: {fileID: 4395111116741988924, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4395111116741988924, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 5b3b8bb353ed57940a08bc4a596a7bf2, type: 3}
+    - target: {fileID: 4429776105563147956, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4429776105563147956, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 5b3b8bb353ed57940a08bc4a596a7bf2, type: 3}
+    - target: {fileID: 6209358733784266173, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6209358733784266173, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: f8a272081cc3a624490f2787bbe1ac09, type: 3}
     - target: {fileID: 6393438903970805048, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: m_Name
       value: CombatInterface
       objectReference: {fileID: 0}
     - target: {fileID: 6679891624759913468, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679891624759913468, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d06e775e7920d64da4c85f1fcfc7ef8, type: 3}
+    - target: {fileID: 6703937111938279984, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6703937111938279984, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 9d06e775e7920d64da4c85f1fcfc7ef8, type: 3}
+    - target: {fileID: 7487975696563412197, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7487975696563412197, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: f8a272081cc3a624490f2787bbe1ac09, type: 3}
+    - target: {fileID: 7883852574810532837, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: spriteBoutonUtilise
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7883852574810532837, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
       propertyPath: spriteBoutonPossible
       value: 
-      objectReference: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
+      objectReference: {fileID: 21300000, guid: 5b3b8bb353ed57940a08bc4a596a7bf2, type: 3}
+    - target: {fileID: 8796053995237741748, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Size.x
+      value: 4.183858
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796053995237741748, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Size.y
+      value: 4.18386
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796053995237741748, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8796053995237741748, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
+      propertyPath: m_Center.y
+      value: -0.063127674
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2241329357128719284, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 055d4afe632efe84e9018d7cbc0678ba, type: 3}
