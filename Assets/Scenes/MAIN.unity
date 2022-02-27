@@ -7978,7 +7978,7 @@ MonoBehaviour:
   choiceRightDialogue: "Elle ne bouge pas. Elle est derri\xE8re moi et ne me fera
     rien. N'est-ce pas ?"
   finalChoiceString: "La seule chose que je comprends est qu'elle me fait peur. Et
-    essayer de l'observer me donne un mal de cr\xE2ne insupportables.\r"
+    essayer de l'observer me donne un mal de cr\xE2ne insupportable.\r"
   degatsPhysiques: 15
   degatsMentaux: 25
 --- !u!4 &1924192347
