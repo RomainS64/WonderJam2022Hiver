@@ -4709,19 +4709,19 @@ MonoBehaviour:
   nbSalleUI: {fileID: 1491887352}
   typesDePieces:
   - piece: {fileID: 1645042486}
-    ponderation: 5
+    ponderation: 3
   - piece: {fileID: 803827793}
-    ponderation: 32
+    ponderation: 28
   - piece: {fileID: 585915337}
     ponderation: 13
   - piece: {fileID: 1784761873}
-    ponderation: 10
+    ponderation: 8
   - piece: {fileID: 324250560}
-    ponderation: 10
+    ponderation: 6
   - piece: {fileID: 1436424220}
     ponderation: 7
   - piece: {fileID: 619003457}
-    ponderation: 2
+    ponderation: 14
   - piece: {fileID: 1924192346}
     ponderation: 6
   - piece: {fileID: 2061172019}

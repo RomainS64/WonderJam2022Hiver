@@ -5,26 +5,26 @@ using UnityEngine;
 static public class DIALOGUES
 {
     //FIRST PIECE
-    static public string firstPiece = "Ceci est le premier dialogue";
+    static public string firstPiece = "Toutes mes recherches m'ont conduites jusqu'ici. Maintenant il n'y a plus de retour en arrière.";
     ///PIECE VIDE
     static public string pieceVide = "Cette piece est vide... Je ne m'y sens pas très à l'aise...";
 
     ///PIECE DU CHIEN
-    static public string chienDocile1 = "Tu m'as l'air bien gentil petit CH1-3n. Qu'est-ce que tu fais icitte tout seul ?";
+    static public string chienDocile1 = "OH, un CH1-3n ! Qu'est-ce que tu fais ici tout seul ?";
 
     static public string chienDocileCaresse1 = "Te câliner est réellement réconfortant.";
     static public string chienDocileCaresse2 = "C'est un bon robot qui aime les caresses ça ! Oh, tu m'accompagnes ?";
 
-    static public string chienDocileAttaque1 = "Saleté de robot ! Il m'a frappé !";
-    static public string chienDocileAttaque2 = "Pourquoi ai-je fait ça, c'était même pas déstressant...";
+    static public string chienDocileAttaque1 = "AIE ! Saleté de robot !";
+    static public string chienDocileAttaque2 = "Pourquoi ai-je fait ça, ce n'était même pas déstressant...";
 
-    static public string chienMechant1 = "Ce CH1-3n m'a vraiment l'air agressif...";
+    static public string chienMechant1 = "Ce CH1-3n m'a l'air très anxieux";
 
-    static public string chienMechantCaresse1 = "AIE IL M'A FRAPPÉ ! J'aurais dû m'en douter aussi...";
-    static public string chienMechantAttaque1 = "Prends ça sale robot, c'est ça dégage !";
+    static public string chienMechantCaresse1 = "AIE ! Il m'a foncé dessus ! J'aurais dû m'en douter aussi...";
+    static public string chienMechantAttaque1 = "Tient ! Prends ça ! Allez c'est ça dégage !";
 
     ///PIECE SQUELETTE
-    static public string squeletteQuestion = "L'armure de ce squelette me serait sûrement plus utile qu'à ce dernier...";
+    static public string squeletteQuestion = "Ce tas d'os est vraiment immonde. Mais l'armure qu'il porte pourrait m'être utile.";
     static public string squeletteRep2 = "Prendre l'armure";
     static public string squeletteRep1 = "Laisser le cadavre";
 

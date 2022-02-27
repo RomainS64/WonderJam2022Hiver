@@ -16,5 +16,5 @@ MonoBehaviour:
   nomEstFeminin: 1
   type: 0
   choosingDialogue: J'ai vu le symbole de cette statuette un peu partout icitte.
-  pickUpDialogue: "Je me demande pourquoi cette fl\xE8che est aussi importante..."
+  pickUpDialogue: "Cette fl\xE8che doit \xEAtre tr\xE8s importante."
   sprite: {fileID: 21300000, guid: 77f0201aa1666c84ca930f9c24d66230, type: 3}
