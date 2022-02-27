@@ -5,12 +5,17 @@ public class ItemObject : ScriptableObject
 {
     public enum ItemType
     {
-        Bandage,
+        StatuetteGuide,
         Veste,
-        OrbeEtrange
+        OrbeEtrange,
+        HoloparcheminEndommage,
+        JoyauxIncandescent,
+        DoigtDeRobot,
+        PelucheEtrange
     }
 
     public string itemName;
+    public bool nomEstFeminin;
     public ItemType type;
 
     [TextArea]

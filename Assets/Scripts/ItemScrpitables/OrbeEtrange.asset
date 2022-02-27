@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f2cd11f6520ada4c89b8f285b95a72c, type: 3}
   m_Name: OrbeEtrange
   m_EditorClassIdentifier: 
-  itemName: Orbreetranageaegeoui
+  itemName: "Orbe \xE9trange"
   type: 2
-  pickUpDialogue: Yannick
+  choosingDialogue: "Pfff c'est juste un orbe... Qu'est-ce que ?! J'ai cru voir quelque
+    chose \xE0 l'int\xE9rieur !"
+  pickUpDialogue: "J'ai l'impression de voir quelque chose en feu s'\xE9craser sur
+    une plan\xE8te... Je devrais le garder..."
   sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}

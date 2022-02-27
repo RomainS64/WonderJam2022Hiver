@@ -46,14 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInCombat: 0
+  damage: 0
   actionButtons:
   - {fileID: 5741510654622867828}
   - {fileID: 5632554143302729212}
   - {fileID: 1493438032668782509}
   - {fileID: 6204424529798271751}
   - {fileID: 3340061838549178744}
-  enemy: {fileID: 6032572085368828448}
+  enemyGO: {fileID: 0}
+  lootSpawnTransform: {fileID: 0}
+  lootSpawnTransform2: {fileID: 0}
   slider: {fileID: 3180217350737272094}
+  typesEnemy:
+  - {fileID: 11400000, guid: 64c2b24a97a09d64a9e3e06ec58d038e, type: 2}
 --- !u!1001 &3180217349810185070
 PrefabInstance:
   m_ObjectHideFlags: 0

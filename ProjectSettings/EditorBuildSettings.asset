@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HegoJoko/SplashScreen/SplashScreen.unity
+    guid: 451f28f21f5da6f41a057cfdc23a97b9
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: c03b6c25f31972649ab1817c2d3c3187
+  - enabled: 1
+    path: Assets/Scenes/MAIN.unity
+    guid: 20d08b4bafe2b0d4d97add269df0e96f
   m_configObjects: {}

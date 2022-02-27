@@ -1,10 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[Serializable]
+public class PieceAndPonderation
+{
+    public Piece piece;
+    public int ponderation;
+}
 public class PieceManager : MonoBehaviour
 {
-    [SerializeField] private Piece[] typesDePieces;
+    [SerializeField] private Text nbSalleUI;
+    [SerializeField] private PieceAndPonderation[] typesDePieces;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
     private bool isLeftPieceSelected;
@@ -18,6 +27,7 @@ public class PieceManager : MonoBehaviour
 
     public void GoNextPiece(bool isLeftPiece)
     {
+        
         FindObjectOfType<Fade>().StartFade(0, 1, 0.5f, -1);
         FindObjectOfType<Zoom>().StartZoom(5, 3, 0.6f,isLeftPiece ? 
             pieceHistory[pieceHistory.Count - 1].leftDoor.transform:
@@ -41,6 +51,7 @@ public class PieceManager : MonoBehaviour
         }
         FindObjectOfType<Zoom>().StartZoom(5, 5, 0.1f);
         FindObjectOfType<Fade>().StartFade(1, 0, 0.4f, 0);
+        nbSalleUI.text = "" + pieceHistory.Count;
     }
     private void GeneratePatern(Piece newPiece)
     {
@@ -52,11 +63,14 @@ public class PieceManager : MonoBehaviour
     //Retourne une piece au hasard mais qui n'est pas égale aux deux dernieres piece (sauf si c'est un monstre)
     private Piece GetRandomPiece()
     {
-        Piece randomPiece = typesDePieces[Random.Range(0, typesDePieces.Length)];
-        return randomPiece;
-    }
-    void Update()
-    {
-        
+        int rdmValue = UnityEngine.Random.Range(1, 101);
+        int currentValue = 0;
+        for(int i = 0; i < typesDePieces.Length; i++)
+        {
+            currentValue += typesDePieces[i].ponderation;
+            if (rdmValue <= currentValue) return typesDePieces[i].piece;
+        }
+        return typesDePieces[0].piece;
+
     }
 }

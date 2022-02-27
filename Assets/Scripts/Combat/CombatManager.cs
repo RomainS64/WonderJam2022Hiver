@@ -9,9 +9,12 @@ public class CombatManager : MonoBehaviour
     public int damage;
 
     [SerializeField] private GameObject[] actionButtons;
-    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject enemyGO;
     [SerializeField] private Transform lootSpawnTransform, lootSpawnTransform2;
     [SerializeField] private Slider slider;
+
+    [SerializeField] private Enemy[] typesEnemy;
+    private Enemy enemy;
 
     private Life life;
     private ItemWorld itemWorldInThePiece;
@@ -27,7 +30,6 @@ public class CombatManager : MonoBehaviour
     void Start()
     {
         life = FindObjectOfType<Life>();
-        enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
         lootSpawnTransform = GameObject.Find("PieceMonstre/LootSpawnPoint").transform;
     }
     private void OnEnable()
@@ -35,6 +37,9 @@ public class CombatManager : MonoBehaviour
         damage = 0;
         slider.value = 0;
         roundCount = 0;
+        enemyBehaviour = enemyGO.GetComponent<EnemyBehaviour>();
+        enemy = GetRandomEnemy();
+        enemyBehaviour.SetEnemy(enemy.attack, enemy.armor, enemy.bigArmor, enemy.enemySprite, enemy.enemyAnimatorController);
     }
     public void StartCombat()
     {
@@ -108,19 +113,32 @@ public class CombatManager : MonoBehaviour
     {
         StopCombat();
         float resultsFight = slider.value;
+        float spawnChance = Random.value;
         Debug.Log("Resultat du combat : " + resultsFight);
+        Debug.Log("Spawn Chance = " + spawnChance);
         if (resultsFight < 0.5)
         {
             int multiplier = -10;
-            if (resultsFight < -0.5)
+            if (spawnChance < 0.25 && resultsFight >= 0)
             {
-                multiplier -= 5;
-                if (resultsFight < -1)
+                itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+            }
+            if (resultsFight < 0)
+            {
+                if (spawnChance < 0.125 && resultsFight >= -0.5)
+                {
+                    itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+                }
+                if (resultsFight < -0.5)
                 {
                     multiplier -= 5;
-                    if (resultsFight < -1.25)
+                    if (resultsFight < -1)
                     {
-                        multiplier -= 5;
+                        multiplier -= 2;
+                        if (resultsFight < -1.25)
+                        {
+                            multiplier -= 3;
+                        }
                     }
                 }
             }
@@ -137,9 +155,7 @@ public class CombatManager : MonoBehaviour
             }
             else
             {
-                float spawnChance = Random.value;
-                Debug.Log("Spawn Chance = " + spawnChance);
-                if (spawnChance > 0.5)
+                if (spawnChance < 0.5)
                 {
                     itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
                 }
@@ -151,5 +167,26 @@ public class CombatManager : MonoBehaviour
     private void UpdateBalanceOfPowerBarre(float balanceOfPowerSlider)
     {
         slider.value += balanceOfPowerSlider;
+    }
+
+    private Enemy GetRandomEnemy()
+    {
+        int weightSum = 0;
+        int currentWeight = 0;
+        foreach (Enemy enemy in typesEnemy)
+        {
+            weightSum += enemy.weight;
+        }
+        int randomWeght = Random.Range(0, weightSum);
+
+        foreach (Enemy randomEnemy in typesEnemy)
+        {
+            currentWeight += randomEnemy.weight;
+            if(randomWeght <= currentWeight)
+            {
+                return randomEnemy;
+            }
+        }
+        return null;
     }
 }

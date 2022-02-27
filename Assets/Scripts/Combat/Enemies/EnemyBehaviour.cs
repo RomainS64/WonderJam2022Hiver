@@ -40,16 +40,20 @@ public class EnemyBehaviour : MonoBehaviour
     public float EnemyArmor { get; set; }
     public float EnemyAttack { get; set; }
 
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Animator animator;
+
     private bool enemyIsCharged = false;
     [SerializeField] public List<EnemyAction> enemyActions;
-    public EnemyAction tempEnemyAction;
 
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
         Shuffle.ShuffleList(enemyActions);
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        animator = gameObject.GetComponent<Animator>();
     }
-    
+
 
     public void SetAction(EnemyAction enemyAction)
     {
@@ -80,5 +84,16 @@ public class EnemyBehaviour : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void SetEnemy(int ennemyAttack, int defence, int heavyDefence, Sprite sprite, RuntimeAnimatorController animatorController)
+    {
+        
+        attack = ennemyAttack;
+        baseArmor = defence;
+        bigArmor = heavyDefence;
+        spriteRenderer.sprite = sprite;
+        animator.runtimeAnimatorController = animatorController;
+
     }
 }

@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f2cd11f6520ada4c89b8f285b95a72c, type: 3}
-  m_Name: Bandage
+  m_Name: JoyauxIncandescent
   m_EditorClassIdentifier: 
-  itemName: Bandage
-  type: 0
-  choosingDialogue: Debule ctohorstop
-  pickUpDialogue: 'Ahhhh bah yess
-
-'
-  sprite: {fileID: 21300000, guid: 4b31cc9aa1cb4f54ea3ff39879f2ade0, type: 3}
+  itemName: Joyaux Incandescent
+  type: 4
+  choosingDialogue: Ce rubis chauffe quand je le touche.
+  pickUpDialogue: Ca me sera bien utile.
+  sprite: {fileID: 0}

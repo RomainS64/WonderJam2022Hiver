@@ -34,7 +34,7 @@ public class Life : MonoBehaviour
 
         if (currentLife <= 0)
         {
-            //TODO : DIE
+            FindObjectOfType<Mort>().DisplayMort(true);
         }
 
         slider.value = currentLife;
