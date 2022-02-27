@@ -16,6 +16,9 @@ public class Pensees : MonoBehaviour
     private Life life;
     private Mental mental;
     Action actionToCall = null;
+
+    bool isClicked = false;
+
     private void Start()
     {
         life = FindObjectOfType<Life>();
@@ -45,6 +48,9 @@ public class Pensees : MonoBehaviour
 
     IEnumerator PenseeRoutine()
     {
+
+        isClicked = false;
+
         yield return new WaitForSeconds(0.5f);
         penseeCanvas.SetActive(true);
         penseeTxt.text = "";

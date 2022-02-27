@@ -11,6 +11,8 @@ public class Choise : MonoBehaviour
     [SerializeField] private Image choiseBG,choiseLBG,choiseRBG;
     [SerializeField] private Text choiseTxt, choiseLTxt, choiseRTxt;
     [SerializeField] private float textSpeed, fadeSpeed;
+
+
     void Start()
     {
         choiseCanvas.SetActive(false);
@@ -55,6 +57,13 @@ public class Choise : MonoBehaviour
         {
             currentText += text[i];
             choiseTxt.text = currentText;
+
+            if(Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                choiseTxt.text = text;
+                break;
+            }
+
             yield return new WaitForSeconds(textSpeed / 10f);
         }
         choiseLTxt.text = leftChoise;

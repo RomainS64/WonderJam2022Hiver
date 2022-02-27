@@ -79,4 +79,18 @@ public class Inventory
             Debug.Log("Item n" + i + ": " + items[i].type.ToString());
         }
     }
+
+    public List<ItemObject> GetAllDifferantItems()
+    {
+        List<ItemObject> itemObejctsCopy = new List<ItemObject>();
+        foreach (var item in items)
+        {
+            if (!itemObejctsCopy.Contains(item))
+            {
+                itemObejctsCopy.Add(item);
+            }
+        }
+
+        return itemObejctsCopy;
+    }
 }

@@ -11,6 +11,13 @@ public class Mort : MonoBehaviour
     [SerializeField] private GameObject mortCanvas;
     [SerializeField] private Image bg,fg;
     [SerializeField] private Text vieTxt, mentalTxt,continueTxt;
+
+    [SerializeField]
+    private GameObject itemSpriteContainerPrefab;
+
+    [SerializeField]
+    private GameObject itemsContainerParent;
+
     private void Start()
     {
         mortCanvas.SetActive(false);
@@ -60,4 +67,19 @@ public class Mort : MonoBehaviour
 
     }
 
+    private void UpdateItemPickedUpFromAllTheGame()
+    {
+        List<ItemObject> itemsCopy = FindObjectOfType<PlayerTestForInventory>().Inventory.GetAllDifferantItems();
+
+        foreach (Transform child in itemsContainerParent.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (var item in itemsCopy)
+        {
+            Instantiate(itemSpriteContainerPrefab, itemsContainerParent.transform);
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = item.sprite;
+        }
+    }
 }
