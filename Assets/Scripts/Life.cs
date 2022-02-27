@@ -7,6 +7,8 @@ public class Life : MonoBehaviour
 {
     [SerializeField] private int maxLife;
     [SerializeField] private Slider slider;
+
+    [SerializeField]
     private int currentLife;
     public int CurrentLife => currentLife;
    

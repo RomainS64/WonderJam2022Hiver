@@ -10,6 +10,5 @@ public class PlayerTestForInventory : MonoBehaviour
     void Start()
     {
         inventory = new Inventory();
-
     }
 }

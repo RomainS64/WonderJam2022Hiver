@@ -26,7 +26,7 @@ public class Mort : MonoBehaviour
 
     public void DisplayMort(bool isLifeDeath = true)
     {
-        
+        UpdateItemPickedUpFromAllTheGame();
         isDead = true;
         mortCanvas.SetActive(true);
         StartCoroutine(LifeDeathCoroutine(isLifeDeath));
@@ -69,7 +69,12 @@ public class Mort : MonoBehaviour
 
     private void UpdateItemPickedUpFromAllTheGame()
     {
-        List<ItemObject> itemsCopy = FindObjectOfType<PlayerTestForInventory>().Inventory.GetAllDifferantItems();
+        Inventory theinventory = FindObjectOfType<PlayerTestForInventory>().Inventory;
+        theinventory.AddItem(ItemObject.ItemType.JoyauxIncandescent);
+        theinventory.AddItem(ItemObject.ItemType.PelucheEtrange);
+
+        List<ItemObject> itemsCopy = theinventory.GetAllDifferantItems();
+
 
         foreach (Transform child in itemsContainerParent.transform)
         {
@@ -79,7 +84,7 @@ public class Mort : MonoBehaviour
         foreach (var item in itemsCopy)
         {
             Instantiate(itemSpriteContainerPrefab, itemsContainerParent.transform);
-            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = item.sprite;
+            itemsContainerParent.transform.GetComponent<SpriteRenderer>().sprite = item.sprite;
         }
     }
 }
