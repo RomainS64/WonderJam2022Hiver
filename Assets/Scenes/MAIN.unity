@@ -7181,6 +7181,16 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
+  - name: DefencePlayer
+    clip: {fileID: 8300000, guid: 491a2e627f22d1246a91b5334f64b76b, type: 3}
+    volume: 0.15
+    pitch: 1.5
+    source: {fileID: 0}
+  - name: ChargePlayer
+    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
+    volume: 0.5
+    pitch: 1.75
+    source: {fileID: 0}
   - name: FriendlyBot
     clip: {fileID: 8300000, guid: b7d2cd12c203fa94fb78cb91d539b2f6, type: 3}
     volume: 0.2
@@ -7219,12 +7229,12 @@ MonoBehaviour:
   - name: DefenceEnemy
     clip: {fileID: 8300000, guid: 491a2e627f22d1246a91b5334f64b76b, type: 3}
     volume: 0.15
-    pitch: 0.5
+    pitch: 1.25
     source: {fileID: 0}
   - name: ChargeEnemy
-    clip: {fileID: 8300000, guid: b9185f72d5355e74ba6dee6790c75979, type: 3}
+    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
     volume: 0.5
-    pitch: 0.45
+    pitch: 1.25
     source: {fileID: 0}
 --- !u!1 &1784761871
 GameObject:
