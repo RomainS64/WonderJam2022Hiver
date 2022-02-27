@@ -19,4 +19,4 @@ MonoBehaviour:
     voir quelque chose \xE0 l'int\xE9rieur !"
   pickUpDialogue: "J'ai l'impression de voir quelque chose briller et dispara\xEEtre
     sur une plan\xE8te... Je vais le garder..."
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 3}
+  sprite: {fileID: 21300000, guid: a0f88a90006106b4ba79a1a6f3929552, type: 3}

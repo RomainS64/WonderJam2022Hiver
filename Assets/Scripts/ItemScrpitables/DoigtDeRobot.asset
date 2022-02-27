@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Doigt de Robot
   nomEstFeminin: 0
   type: 5
-  choosingDialogue: "Je me demande \xE0 quel robot appartient ce doigt"
+  choosingDialogue: Un doigt ?
   pickUpDialogue: Il m'intringue... Je le garde avec moi.
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 38df809431dd5ad4c9180ead2006e100, type: 3}
