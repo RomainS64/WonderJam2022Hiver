@@ -4697,7 +4697,7 @@ MonoBehaviour:
   nbSalleUI: {fileID: 1491887352}
   typesDePieces:
   - piece: {fileID: 803827793}
-    ponderation: 320
+    ponderation: 32
   - piece: {fileID: 1645042486}
     ponderation: 5
   - piece: {fileID: 585915337}
