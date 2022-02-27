@@ -7176,6 +7176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: 968279c5941ea2f4babd30980a7c3500, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
   - name: AttackPlayer
     clip: {fileID: 8300000, guid: 5574ba6bd265bdd408046268c44f57ca, type: 3}
     volume: 0.2

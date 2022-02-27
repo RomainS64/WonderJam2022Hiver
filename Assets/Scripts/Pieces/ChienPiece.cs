@@ -30,13 +30,13 @@ public class ChienPiece : Piece
         if (isDocile) {
             chienSprite.sprite = chienMimi;
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocile1);
-            FindObjectOfType<AudioManager>().Play("FriendlyBot");
+            FindObjectOfType<AudioManager>().Play("FriendlyBot", false);
         }
         else
         {
             chienSprite.sprite = chienMechant;
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechant1);
-            FindObjectOfType<AudioManager>().Play("BadBot");
+            FindObjectOfType<AudioManager>().Play("BadBot", false);
         }
     }
     private void Update()
@@ -56,7 +56,7 @@ public class ChienPiece : Piece
     {
         if (isDocile)
         {
-            FindObjectOfType<AudioManager>().Play("LoveCH13n");
+            FindObjectOfType<AudioManager>().Play("LoveCH13n", false);
             int rdm = Random.Range(0, 2);
             if (rdm > 0  || FindObjectOfType<Familier>().HaveChien)
             {
@@ -75,7 +75,7 @@ public class ChienPiece : Piece
         }
         else
         {
-            FindObjectOfType<AudioManager>().Play("HittedCH13n");
+            FindObjectOfType<AudioManager>().Play("HittedCH13n", false);
             ScreenShake.Shake(0.3f, 1f);
             life.TakeDamage(chienDamage);
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechantCaresse1);
@@ -85,14 +85,14 @@ public class ChienPiece : Piece
     }
     public void Attaquer()
     {
-        FindObjectOfType<AudioManager>().Play("KickCH13n");
+        FindObjectOfType<AudioManager>().Play("KickCH13n", false);
         if (isDocile)
         {
             int rdm = Random.Range(0, 2);
             if (rdm > 0)
             {
                 ScreenShake.Shake(0.3f, 1f);
-                FindObjectOfType<AudioManager>().Play("HittedCH13n");
+                FindObjectOfType<AudioManager>().Play("HittedCH13n", false);
                 life.TakeDamage(chienDamage);
                 FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocileAttaque1);
                 spriteChien.SetActive(false);
