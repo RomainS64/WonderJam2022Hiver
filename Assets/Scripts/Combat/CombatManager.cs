@@ -113,19 +113,32 @@ public class CombatManager : MonoBehaviour
     {
         StopCombat();
         float resultsFight = slider.value;
+        float spawnChance = Random.value;
         Debug.Log("Resultat du combat : " + resultsFight);
+        Debug.Log("Spawn Chance = " + spawnChance);
         if (resultsFight < 0.5)
         {
             int multiplier = -10;
-            if (resultsFight < -0.5)
+            if (spawnChance < 0.25 && resultsFight >= 0)
             {
-                multiplier -= 5;
-                if (resultsFight < -1)
+                itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+            }
+            if (resultsFight < 0)
+            {
+                if (spawnChance < 0.125 && resultsFight >= -0.5)
                 {
-                    multiplier -= 2;
-                    if (resultsFight < -1.25)
+                    itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+                }
+                if (resultsFight < -0.5)
+                {
+                    multiplier -= 5;
+                    if (resultsFight < -1)
                     {
-                        multiplier -= 3;
+                        multiplier -= 2;
+                        if (resultsFight < -1.25)
+                        {
+                            multiplier -= 3;
+                        }
                     }
                 }
             }
@@ -142,9 +155,7 @@ public class CombatManager : MonoBehaviour
             }
             else
             {
-                float spawnChance = Random.value;
-                Debug.Log("Spawn Chance = " + spawnChance);
-                if (spawnChance > 0.5)
+                if (spawnChance < 0.5)
                 {
                     itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
                 }

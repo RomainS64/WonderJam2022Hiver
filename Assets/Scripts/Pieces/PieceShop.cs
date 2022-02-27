@@ -25,7 +25,8 @@ public class PieceShop : Piece
             {
                 isVitalityBuff = Random.Range(0, 2) > 0;
                 itemToTrade = inventory.Inventory.FindRandomItem();
-                FindObjectOfType<Choise>().StartChoise("Oooh ! ton "+itemToTrade.itemName+" m'intéresse \n Je te l'échange contre un peu de "+(isVitalityBuff?"vitalité":"mental"),"Ecanger","Ne pas l'échanger", DontTake, Take);
+                string beginningSentence = itemToTrade.nomEstFeminin ? "Oooh ! ta " + itemToTrade.itemName : "Oooh ! ton" + itemToTrade.itemName;
+                FindObjectOfType<Choise>().StartChoise(beginningSentence +" m'intéresse \n Je te l'échange contre un peu de "+(isVitalityBuff?"vitalité":"mental"),"Echanger","Ne pas l'échanger", DontTake, Take);
             }
             else
             {

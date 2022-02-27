@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Doigt de Robot
   type: 5
-  choosingDialogue: 
-  pickUpDialogue: "Je me demande o\xF9 est le reste du corps..."
+  choosingDialogue: "Je me demande \xE0 quel robot appartient ce doigt"
+  pickUpDialogue: On ne sait jamais...
   sprite: {fileID: 0}

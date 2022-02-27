@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: PelucheEtrange
   m_EditorClassIdentifier: 
   itemName: "Peluche \xC9trange"
-  type: 0
-  choosingDialogue: 
-  pickUpDialogue: "Qu'elle horrible peluche, pourtant je ne peux m'emp\xEAcher de
-    vouloir la prendre..."
-  sprite: {fileID: 0}
+  type: 6
+  choosingDialogue: Cette peluche est vraiment abominable...
+  pickUpDialogue: Je la sens me regarder.
+  sprite: {fileID: 21300000, guid: 4b31cc9aa1cb4f54ea3ff39879f2ade0, type: 3}

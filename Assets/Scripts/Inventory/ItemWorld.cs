@@ -66,11 +66,19 @@ public class ItemWorld : MonoBehaviour
     {
         switch (itemComp.type)
         {
-            case ItemObject.ItemType.Bandage:
+            case ItemObject.ItemType.StatuetteGuide:
                 break;
             case ItemObject.ItemType.Veste:
                 break;
             case ItemObject.ItemType.OrbeEtrange:
+                break;
+            case ItemObject.ItemType.HoloparcheminEndommage:
+                break;
+            case ItemObject.ItemType.JoyauxIncandescent:
+                break;
+            case ItemObject.ItemType.DoigtDeRobot:
+                break;
+            case ItemObject.ItemType.PelucheEtrange:
                 break;
             default:
                 Debug.Log("No effect assigned to object in ItemWorld.cs MakeAnEffect() !");

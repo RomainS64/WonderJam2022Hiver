@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f2cd11f6520ada4c89b8f285b95a72c, type: 3}
-  m_Name: PorteClefTourEiffel
+  m_Name: HoloparcheminEndommage
   m_EditorClassIdentifier: 
-  itemName: Porte Clef Tour Eiffel
-  type: 0
-  choosingDialogue: 
-  pickUpDialogue: "Pourquoi avoir attach\xE9e une petite tour \xE0 un anneau ?"
+  itemName: "Holoparchemin Endommag\xE9"
+  type: 3
+  choosingDialogue: C'est un vieux holoparchemin.
+  pickUpDialogue: "Beaucoup de donn\xE9es ont \xE9t\xE9 perdues mais \xE7a parle
+    d'un Ordre des 16 et de la fl\xE8che divine"
   sprite: {fileID: 0}

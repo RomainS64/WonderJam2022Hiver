@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Veste en cuir
   type: 1
-  pickUpDialogue: L'oeuf ! ne joue pas avec la pierre.
+  choosingDialogue: "La qualit\xE9 de cette veste laisse \xE0 d\xE9sirer..."
+  pickUpDialogue: "Elle me va plut\xF4t bien par contre"
   sprite: {fileID: 21300000, guid: 540990b985090bb4687ad04645b912eb, type: 3}
