@@ -10,11 +10,11 @@ public class CombatManager : MonoBehaviour
 
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
-    [SerializeField] private Transform lootSpawnTransform1, lootSpawnTransform2;
+    [SerializeField] private Transform lootSpawnTransform, lootSpawnTransform2;
     [SerializeField] private Slider slider;
 
     private Life life;
-    private ItemWorld itemWorldInThePiece1, itemWorldInThePiece2;
+    private ItemWorld itemWorldInThePiece;
 
     private EnemyBehaviour enemyBehaviour;
 
@@ -28,8 +28,7 @@ public class CombatManager : MonoBehaviour
     {
         life = FindObjectOfType<Life>();
         enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
-        lootSpawnTransform1 = GameObject.Find("").transform;
-        lootSpawnTransform2 = GameObject.Find("").transform;
+        lootSpawnTransform = GameObject.Find("PieceMonstre/LootSpawnPoint").transform;
     }
     private void OnEnable()
     {
@@ -131,10 +130,19 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
-            itemWorldInThePiece1 = ItemWorld.SpawnItemWorld(lootSpawnTransform1, ItemAssets.Instance.GetRandomItemType());
+            
             if (resultsFight > 1)
             {
-                itemWorldInThePiece2 = ItemWorld.SpawnItemWorld(lootSpawnTransform2, ItemAssets.Instance.GetRandomItemType());
+                itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+            }
+            else
+            {
+                float spawnChance = Random.value;
+                Debug.Log("Spawn Chance = " + spawnChance);
+                if (spawnChance > 0.5)
+                {
+                    itemWorldInThePiece = ItemWorld.SpawnItemWorld(lootSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+                }
             }
             Debug.Log("aucun dégât");
         }
