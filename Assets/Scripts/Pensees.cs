@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,25 +12,37 @@ public class Pensees : MonoBehaviour
     [SerializeField] private Image penseeBG;
     [SerializeField] private Text penseeTxt;
     private IEnumerator pensee;
-    private string text;
+    private string[] text;
     private Life life;
     private Mental mental;
+    Action actionToCall = null;
     private void Start()
     {
         life = FindObjectOfType<Life>();
         mental = FindObjectOfType<Mental>();
         penseeCanvas.SetActive(false);
-        text = penseeTxt.text;
+        text = new string[1] { penseeTxt.text };
     }
-    public void StartPensee(string txt = null)
+
+    public void StartPensee(string txt = null, Action actionToCall = null)
     {
-        if (txt != null) text = txt;
+        if (actionToCall != null) this.actionToCall = actionToCall;
+        if (txt != null) text = new string[1] { txt};
         if (pensee != null) StopCoroutine(pensee);
         isInPensee = true;
         pensee = PenseeRoutine();
         StartCoroutine(pensee);
     }
-   
+    public void StartPensee(string[] txts = null,Action actionToCall = null)
+    {
+        if (actionToCall != null) this.actionToCall = actionToCall;
+        if (txts != null) text = txts;
+        if (pensee != null) StopCoroutine(pensee);
+        isInPensee = true;
+        pensee = PenseeRoutine();
+        StartCoroutine(pensee);
+    }
+
     IEnumerator PenseeRoutine()
     {
         yield return new WaitForSeconds(0.5f);
@@ -44,22 +57,31 @@ public class Pensees : MonoBehaviour
             penseeBG.color += stepColor;
             yield return new WaitForSeconds(fadeSpeed/10f);
         }
-        penseeBG.color = endColor;
-        for (int i = 0; i < text.Length; i++)
+        for(int j = 0; j < text.Length; j++)
         {
-            currentText += text[i];
-            penseeTxt.text = currentText;
-            yield return new WaitForSeconds(textSpeed/10f);
+            penseeTxt.text = "";
+            currentText = "";
+            penseeBG.color = endColor;
+            for (int i = 0; i < text[j].Length; i++)
+            {
+                currentText += text[j][i];
+                penseeTxt.text = currentText;
+                yield return new WaitForSeconds(textSpeed / 10f);
+            }
+            while (!Input.anyKeyDown) yield return null;
         }
-        while (!Input.anyKeyDown) yield return null;
+
         penseeTxt.text = "";
         for (int i = 0; i < 50; i++)
         {
             penseeBG.color -= stepColor;
             yield return new WaitForSeconds(fadeSpeed/10f);
         }
+
         isInPensee = false;
         penseeCanvas.SetActive(false);
         penseeBG.color = endColor;
+        if (actionToCall != null)actionToCall.Invoke();
+
     }
 }
