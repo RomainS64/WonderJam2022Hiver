@@ -6,13 +6,16 @@ using UnityEngine.UI;
 public class CombatManager : MonoBehaviour
 {
     public bool isInCombat = false;
+    public int damage;
 
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
     [SerializeField] private Slider slider;
 
+    private Life life;
+
     private EnemyBehaviour enemyBehaviour;
-    
+
     private GameObject buttonPressed;
     private int roundCount = 0;
     private float balanceOfPower;
@@ -21,10 +24,12 @@ public class CombatManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        life = FindObjectOfType<Life>();
         enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
     }
     private void OnEnable()
     {
+        damage = 0;
         slider.value = 0;
         roundCount = 0;
     }
@@ -100,17 +105,45 @@ public class CombatManager : MonoBehaviour
     {
         StopCombat();
         float resultsFight = slider.value;
-        if (resultsFight < -0.5)
+        Debug.Log("Resultat du combat : " + resultsFight);
+        if (resultsFight < 0.5)
         {
-            
-        }
-        else if (resultsFight > 0.5)
-        {
-
+            int multiplier = -2;
+            if (resultsFight < 0.25)
+            {
+                multiplier -= 2;
+                if (resultsFight < 0)
+                {
+                    multiplier -= 2;
+                    if (resultsFight < -0.25)
+                    {
+                        multiplier -= 4;
+                        if (resultsFight < -0.5)
+                        {
+                            multiplier -= 5;
+                            if (resultsFight < -0.75)
+                            {
+                                multiplier -= 5;
+                                if (resultsFight < -1)
+                                {
+                                    multiplier -= 5;
+                                    if (resultsFight < -1.25)
+                                    {
+                                        multiplier -= 5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            damage = (int)((slider.minValue + resultsFight) * multiplier);
+            Debug.Log("Dégât prit : " + damage);
+            life.TakeDamage(damage);
         }
         else
         {
-
+            Debug.Log("aucun dégât");
         }
     }
 
