@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class ButtonBehaviour : MonoBehaviour
@@ -10,7 +11,6 @@ public class ButtonBehaviour : MonoBehaviour
     [SerializeField] private Sprite spriteBoutonUtilise,spriteBoutonPossible;
     private SpriteRenderer spriteBouton;
     private int playerArmor, playerAttack;
-    private AudioSource audioSource;
     public int PlayerArmor { get { return playerArmor; } set { playerArmor = value; } }
     public int PlayerAttack { get { return playerAttack; } set { playerAttack = value; } }
 
@@ -24,7 +24,6 @@ public class ButtonBehaviour : MonoBehaviour
     void Start()
     {
         spriteBouton = gameObject.GetComponentInParent<SpriteRenderer>();
-        audioSource = gameObject.GetComponentInParent<AudioSource>();
     }
 
     private void OnEnable()
@@ -45,6 +44,7 @@ public class ButtonBehaviour : MonoBehaviour
         {
             playerArmor = ArmorManager.GetArmor();
             playerAttack = AttackManager.GetAttack();
+            FindObjectOfType<AudioManager>().Play("AttackPlayer");
             Debug.Log("Joueur attaque");
         }
         else
@@ -55,7 +55,6 @@ public class ButtonBehaviour : MonoBehaviour
             Debug.Log("La prochaine capacité sera multipliée par 2 !!!");
         }
         Debug.Log("La capacité est en train de charger " + isCharging);
-        audioSource.Play();
         spriteBouton.sprite = spriteBoutonUtilise;
         this.isActive = false;
     }

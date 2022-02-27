@@ -68,6 +68,7 @@ public class EnemyBehaviour : MonoBehaviour
                     EnemyAttack *= 2;
                     enemyIsCharged = false;
                 }
+                FindObjectOfType<AudioManager>().Play("AttackEnemy");
                 break;
             case ActionType.Charge:
                 EnemyArmor = baseArmor;

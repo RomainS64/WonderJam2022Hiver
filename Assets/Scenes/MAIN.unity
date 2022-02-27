@@ -2057,6 +2057,7 @@ Transform:
   - {fileID: 1859750474}
   - {fileID: 1834206024}
   - {fileID: 670777969}
+  - {fileID: 1754639838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6894,6 +6895,70 @@ RectTransform:
   m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1754639837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754639838}
+  - component: {fileID: 1754639839}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1754639838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754639837}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 521785763}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1754639839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754639837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fad038fde8060468af905d704fe00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: AttackPlayer
+    clip: {fileID: 8300000, guid: 5574ba6bd265bdd408046268c44f57ca, type: 3}
+    volume: 0.2
+    pitch: 0.1
+    source: {fileID: 0}
+  - name: FriendlyBot
+    clip: {fileID: 8300000, guid: b7d2cd12c203fa94fb78cb91d539b2f6, type: 3}
+    volume: 0.2
+    pitch: 0.1
+    source: {fileID: 0}
+  - name: BadBot
+    clip: {fileID: 8300000, guid: dd04a7a97d8a0f54bbf9664d554d160b, type: 3}
+    volume: 0.2
+    pitch: 0.1
+    source: {fileID: 0}
+  - name: AttackEnemy
+    clip: {fileID: 8300000, guid: 18bcf9cdccbe4e14e9ccef1a63d3e0f7, type: 3}
+    volume: 0.2
+    pitch: 0.1
+    source: {fileID: 0}
 --- !u!1 &1784761871
 GameObject:
   m_ObjectHideFlags: 0
@@ -7925,6 +7990,7 @@ GameObject:
   - component: {fileID: 1910370364}
   - component: {fileID: 1910370365}
   - component: {fileID: 1910370361}
+  - component: {fileID: 1910370367}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8047,6 +8113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95449a9f5652e4243a05882e073fc321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &1910370367
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910370360}
+  m_Enabled: 1
 --- !u!1 &1924192345
 GameObject:
   m_ObjectHideFlags: 0
