@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Veste
   m_EditorClassIdentifier: 
   itemName: Veste en cuir
+  nomEstFeminin: 1
   type: 1
   choosingDialogue: "La qualit\xE9 de cette veste laisse \xE0 d\xE9sirer..."
   pickUpDialogue: "Elle me va plut\xF4t bien par contre"
