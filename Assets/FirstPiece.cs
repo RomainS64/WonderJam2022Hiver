@@ -8,4 +8,8 @@ public class FirstPiece : Piece
     {
         FindObjectOfType<Pensees>().StartPensee(DIALOGUES.firstPiece);
     }
+    private void Update()
+    {
+        base.Update();
+    }
 }
