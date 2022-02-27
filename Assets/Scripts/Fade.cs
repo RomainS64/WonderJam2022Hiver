@@ -38,11 +38,11 @@ public class Fade : MonoBehaviour
             image.color += colorStep;
         }
         image.color = new Color(image.color.r, image.color.g, image.color.b, toAlpha);
+        isInFade = false;
         if (timeBeforeDesactive >= 0)
         {
             yield return new WaitForSeconds(timeBeforeDesactive);
             image.gameObject.SetActive(false);
-            isInFade = false;
         }
     }
 }
