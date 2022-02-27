@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Joyaux Incandescent
   nomEstFeminin: 0
   type: 4
-  choosingDialogue: Ce rubis chauffe quand je le touche.
-  pickUpDialogue: Je pense qu'il me sera utile !
+  choosingDialogue: Oh ! Ce rubis chauffe quand je le touche.
+  pickUpDialogue: "Je le prends avec moi, je l'\xE9tudierai plus tard..."
   sprite: {fileID: 21300000, guid: a6efab6a0f908044ca8df4a6a26d30c1, type: 3}

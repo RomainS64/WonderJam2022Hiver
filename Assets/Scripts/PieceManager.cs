@@ -17,6 +17,7 @@ public class PieceManager : MonoBehaviour
     [SerializeField] private Piece firstPiece;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
+    public List<Piece> PieceHistory => pieceHistory;
     private bool isLeftPieceSelected;
 
     void Start()
@@ -24,6 +25,7 @@ public class PieceManager : MonoBehaviour
         pieceHistory = new List<Piece>();
         GeneratePatern(firstPiece);
         pieceHistory[pieceHistory.Count - 1].DisplayPiece();
+        FindObjectOfType<AudioManager>().Play("Music", true);
     }
 
     public void GoNextPiece(bool isLeftPiece)

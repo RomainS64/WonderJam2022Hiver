@@ -84,7 +84,7 @@ public class PieceCristalSang : Piece
 
             isCristalActivated = false;
             totalLifeStolenFromCristal = 0;
-            FindObjectOfType<AudioManager>().Play("CrystalHeal");
+            FindObjectOfType<AudioManager>().Play("CrystalHeal", false);
         }
         else
         {
@@ -92,7 +92,7 @@ public class PieceCristalSang : Piece
             life.TakeDamage(Mathf.CeilToInt(totalLifeStolenFromCristal));
 
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.cristalToucheToEnable);
-            FindObjectOfType<AudioManager>().Play("CrystalCurse");
+            FindObjectOfType<AudioManager>().Play("CrystalCurse", false);
 
             isCristalActivated = true;
         }

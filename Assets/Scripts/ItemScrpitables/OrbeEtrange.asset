@@ -17,6 +17,7 @@ MonoBehaviour:
   type: 2
   choosingDialogue: "Mmmh, juste une boule en m\xE9tal... Qu'est-ce que ?! J'ai cru
     voir quelque chose \xE0 l'int\xE9rieur !"
-  pickUpDialogue: "J'ai l'impression de voir quelque chose briller et dispara\xEEtre
-    sur une plan\xE8te... Je vais le garder..."
+  pickUpDialogue: "Il y a comme des visions qui se d\xE9roulent en boucle. Dans ces
+    visions, je remarque quelque chose briller tr\xE8s fort et dispara\xEEtre sur
+    une plan\xE8te..."
   sprite: {fileID: 21300000, guid: a0f88a90006106b4ba79a1a6f3929552, type: 3}

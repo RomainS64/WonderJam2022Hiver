@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: "Holoparchemin Endommag\xE9"
   nomEstFeminin: 0
   type: 3
-  choosingDialogue: C'est un vieux holoparchemin.
-  pickUpDialogue: "Beaucoup de donn\xE9es ont \xE9t\xE9 perdues mais \xE7a parle
-    d'un Ordre des 16 et de la fl\xE8che divine"
+  choosingDialogue: C'est un vieux holo-parchemin.
+  pickUpDialogue: "Beaucoup de donn\xE9es ont \xE9t\xE9 perdues avec le temps...
+    \xC7a parle d'un Ordre des 16 et d'une Fl\xE8che Divine."
   sprite: {fileID: 21300000, guid: af3706a48bc27c645ba8478747fbd94c, type: 3}
