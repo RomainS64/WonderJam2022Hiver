@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PelucheEtrange
   m_EditorClassIdentifier: 
   itemName: "Peluche \xC9trange"
+  nomEstFeminin: 1
   type: 6
   choosingDialogue: Cette peluche est vraiment abominable...
   pickUpDialogue: Je la sens me regarder.
