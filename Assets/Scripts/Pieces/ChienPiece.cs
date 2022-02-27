@@ -6,6 +6,9 @@ public class ChienPiece : Piece
 {
     [SerializeField] private int chienDamage, chienDamageMental;
     [SerializeField] GameObject spriteChien;
+    [SerializeField] SpriteRenderer chienSprite;
+    [SerializeField] Sprite chienMimi, chienMechant;
+
     private bool isDocile;
     private bool firstPenseeDone = false;
 
@@ -25,11 +28,13 @@ public class ChienPiece : Piece
         spriteChien.SetActive(true);
         isDocile = Random.Range(0, 2)==0?true:false;
         if (isDocile) {
-        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocile1);
+            chienSprite.sprite = chienMimi;
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocile1);
         }
         else
         {
-        FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechant1);
+            chienSprite.sprite = chienMechant;
+            FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechant1);
         }
     }
     private void Update()
