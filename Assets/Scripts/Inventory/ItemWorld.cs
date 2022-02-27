@@ -56,6 +56,7 @@ public class ItemWorld : MonoBehaviour
         FindObjectOfType<Pensees>().StartPensee(itemComp.pickUpDialogue);
 
         FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(itemComp.type);
+        FindObjectOfType<AudioManager>().Play("TakeLoot");
 
         MakeAnEffect();
 

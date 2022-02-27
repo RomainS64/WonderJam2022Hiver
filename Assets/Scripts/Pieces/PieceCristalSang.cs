@@ -84,6 +84,7 @@ public class PieceCristalSang : Piece
 
             isCristalActivated = false;
             totalLifeStolenFromCristal = 0;
+            FindObjectOfType<AudioManager>().Play("Heal");
         }
         else
         {

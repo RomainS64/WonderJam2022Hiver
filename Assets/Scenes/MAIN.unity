@@ -6942,22 +6942,37 @@ MonoBehaviour:
   - name: AttackPlayer
     clip: {fileID: 8300000, guid: 5574ba6bd265bdd408046268c44f57ca, type: 3}
     volume: 0.2
-    pitch: 0.1
+    pitch: 1
     source: {fileID: 0}
   - name: FriendlyBot
     clip: {fileID: 8300000, guid: b7d2cd12c203fa94fb78cb91d539b2f6, type: 3}
     volume: 0.2
-    pitch: 0.1
+    pitch: 1
     source: {fileID: 0}
   - name: BadBot
     clip: {fileID: 8300000, guid: dd04a7a97d8a0f54bbf9664d554d160b, type: 3}
     volume: 0.2
-    pitch: 0.1
+    pitch: 1
     source: {fileID: 0}
   - name: AttackEnemy
     clip: {fileID: 8300000, guid: 18bcf9cdccbe4e14e9ccef1a63d3e0f7, type: 3}
     volume: 0.2
-    pitch: 0.1
+    pitch: 1
+    source: {fileID: 0}
+  - name: TakeLoot
+    clip: {fileID: 8300000, guid: 54c56b9deedba5648b026a3fd1e0a7e1, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Heal
+    clip: {fileID: 8300000, guid: 321d8c84a18359949a183922d9092ae9, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: KickCH13n
+    clip: {fileID: 8300000, guid: 0ebc4bdad9e605f42b292ed25c267381, type: 3}
+    volume: 0.5
+    pitch: 1
     source: {fileID: 0}
 --- !u!1 &1784761871
 GameObject:
