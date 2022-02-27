@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Vieux Robot
   weight: 5
-  attack: 4
+  attack: 3
   armor: 1
   bigArmor: 2
   enemySprite: {fileID: 21300000, guid: 29a2d219a73eaca42b5cdd190a4add12, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: StatuetteGuide
   m_EditorClassIdentifier: 
   itemName: Statuette d'un Guide
-  nomEstFeminin: 0
+  nomEstFeminin: 1
   type: 0
   choosingDialogue: J'ai vu le symbole de cette statuette un peu partout icitte.
-  pickUpDialogue: "Le symbole de la fl\xE8che semble important ici..."
+  pickUpDialogue: "Je me demande pourquoi cette fl\xE8che est aussi importante..."
   sprite: {fileID: 21300000, guid: 4b31cc9aa1cb4f54ea3ff39879f2ade0, type: 3}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: PelucheEtrange
   m_EditorClassIdentifier: 
   itemName: "Peluche \xC9trange"
-  nomEstFeminin: 0
+  nomEstFeminin: 1
   type: 6
   choosingDialogue: Cette peluche est vraiment abominable...
-  pickUpDialogue: Je sens qu'elle me regarde.
+  pickUpDialogue: Je la sens me regarder.
   sprite: {fileID: 21300000, guid: 4b31cc9aa1cb4f54ea3ff39879f2ade0, type: 3}
