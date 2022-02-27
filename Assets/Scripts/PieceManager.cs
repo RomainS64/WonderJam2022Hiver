@@ -14,6 +14,7 @@ public class PieceManager : MonoBehaviour
 {
     [SerializeField] private Text nbSalleUI;
     [SerializeField] private PieceAndPonderation[] typesDePieces;
+    [SerializeField] private Piece firstPiece;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
     private bool isLeftPieceSelected;
@@ -21,7 +22,7 @@ public class PieceManager : MonoBehaviour
     void Start()
     {
         pieceHistory = new List<Piece>();
-        GeneratePatern(GetRandomPiece());
+        GeneratePatern(firstPiece);
         pieceHistory[pieceHistory.Count - 1].DisplayPiece();
     }
 

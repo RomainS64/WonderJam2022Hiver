@@ -4,6 +4,8 @@ using UnityEngine;
 
 static public class DIALOGUES
 {
+    //FIRST PIECE
+    static public string firstPiece = "Ceci est le premier dialogue";
     ///PIECE VIDE
     static public string pieceVide = "Cette piece est vide... Je ne m'y sens pas très à l'aise...";
 
