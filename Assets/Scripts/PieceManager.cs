@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 [Serializable]
 public class PieceAndPonderation
@@ -12,6 +12,7 @@ public class PieceAndPonderation
 }
 public class PieceManager : MonoBehaviour
 {
+    [SerializeField] private Text nbSalleUI;
     [SerializeField] private PieceAndPonderation[] typesDePieces;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
@@ -26,6 +27,7 @@ public class PieceManager : MonoBehaviour
 
     public void GoNextPiece(bool isLeftPiece)
     {
+        
         FindObjectOfType<Fade>().StartFade(0, 1, 0.5f, -1);
         FindObjectOfType<Zoom>().StartZoom(5, 3, 0.6f,isLeftPiece ? 
             pieceHistory[pieceHistory.Count - 1].leftDoor.transform:
@@ -49,6 +51,7 @@ public class PieceManager : MonoBehaviour
         }
         FindObjectOfType<Zoom>().StartZoom(5, 5, 0.1f);
         FindObjectOfType<Fade>().StartFade(1, 0, 0.4f, 0);
+        nbSalleUI.text = "" + pieceHistory.Count;
     }
     private void GeneratePatern(Piece newPiece)
     {
