@@ -28,7 +28,7 @@ static public class DIALOGUES
     static public string squeletteRep2 = "Prendre l'armure";
     static public string squeletteRep1 = "Laisser le cadavre";
 
-    static public string squelettePrendre = "Je résistance mieux aux coups ! Mais je vais devoir faire avec l'odeur de putréfaction...";
+    static public string squelettePrendre = "Je résiste mieux aux coups ! Mais je vais devoir faire avec cet odeur de putréfaction...";
     static public string squeletteLaisser = "Je ferais mieux de laisser cette pauvre âme reposer en paix.";
 
     //TRESOR
