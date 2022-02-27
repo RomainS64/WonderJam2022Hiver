@@ -19,7 +19,7 @@ public class SquelettePiece : Piece
         actionDone = false;
         spriteArmor.SetActive(true);
         SetAttackSprite();
-        FindObjectOfType<Choise>().StartChoise(DIALOGUES.squeletteQuestion, DIALOGUES.squeletteRep1, DIALOGUES.squeletteRep2, DontTake,Take);
+        FindObjectOfType<Choise>().StartChoise(DIALOGUES.squeletteQuestion, DIALOGUES.squeletteRep2, DIALOGUES.squeletteRep1, DontTake,Take);
     }
     private void Update()
     {

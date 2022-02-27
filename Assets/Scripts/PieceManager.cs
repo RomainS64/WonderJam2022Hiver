@@ -40,7 +40,7 @@ public class PieceManager : MonoBehaviour
             GeneratePatern(rightPiece);
         }
         FindObjectOfType<Zoom>().StartZoom(5, 5, 0.1f);
-        FindObjectOfType<Fade>().StartFade(1, 0, 0.5f, 0);
+        FindObjectOfType<Fade>().StartFade(1, 0, 0.4f, 0);
     }
     private void GeneratePatern(Piece newPiece)
     {
