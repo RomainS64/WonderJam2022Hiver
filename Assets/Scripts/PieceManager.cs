@@ -17,6 +17,7 @@ public class PieceManager : MonoBehaviour
     [SerializeField] private Piece firstPiece;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
+    public List<Piece> PieceHistory => pieceHistory;
     private bool isLeftPieceSelected;
 
     void Start()

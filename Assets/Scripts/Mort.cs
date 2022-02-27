@@ -18,6 +18,8 @@ public class Mort : MonoBehaviour
     [SerializeField]
     private GameObject itemsContainerParent;
 
+    [SerializeField] private Text textCompteurSalles;
+
     private void Start()
     {
         mortCanvas.SetActive(false);
@@ -26,7 +28,7 @@ public class Mort : MonoBehaviour
 
     public void DisplayMort(bool isLifeDeath = true)
     {
-        //UpdateItemPickedUpFromAllTheGame();
+        UpdateItemPickedUpFromAllTheGame();
         isDead = true;
         mortCanvas.SetActive(true);
         StartCoroutine(LifeDeathCoroutine(isLifeDeath));
@@ -70,11 +72,8 @@ public class Mort : MonoBehaviour
     private void UpdateItemPickedUpFromAllTheGame()
     {
         Inventory theinventory = FindObjectOfType<PlayerTestForInventory>().Inventory;
-        theinventory.AddItem(ItemObject.ItemType.JoyauxIncandescent);
-        theinventory.AddItem(ItemObject.ItemType.PelucheEtrange);
 
         List<ItemObject> itemsCopy = theinventory.GetAllDifferantItems();
-
 
         foreach (Transform child in itemsContainerParent.transform)
         {
@@ -84,7 +83,9 @@ public class Mort : MonoBehaviour
         foreach (var item in itemsCopy)
         {
             Instantiate(itemSpriteContainerPrefab, itemsContainerParent.transform);
-            itemSpriteContainerPrefab.transform.GetComponent<SpriteRenderer>().sprite = item.sprite;
+            itemSpriteContainerPrefab.transform.GetComponent<Image>().sprite = item.sprite;
         }
+
+        textCompteurSalles.text = FindObjectOfType<PieceManager>().PieceHistory.Count + "";
     }
 }
