@@ -7188,7 +7188,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ChargePlayer
     clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
-    volume: 0.5
+    volume: 0.25
     pitch: 1.75
     source: {fileID: 0}
   - name: FriendlyBot
@@ -7233,7 +7233,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ChargeEnemy
     clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
-    volume: 0.5
+    volume: 0.25
     pitch: 1.25
     source: {fileID: 0}
 --- !u!1 &1784761871
