@@ -1489,6 +1489,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6032572085368828448, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
   m_PrefabInstance: {fileID: 1658695792}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &504220362 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1750256529, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+  m_PrefabInstance: {fileID: 1658695792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &504220364
 Animator:
   serializedVersion: 3
@@ -3403,7 +3408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typesDePieces:
-  - {fileID: 987334983}
+  - {fileID: 803827793}
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0
@@ -5136,6 +5141,46 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3180217350737272065, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217350737272065, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217350737272065, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217350737272065, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217350737272065, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 3906890391418231147, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 504220364}
+    - target: {fileID: 3906890391418231147, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 504220362}
+    - target: {fileID: 7861757465711901202, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: enemyGO
+      value: 
+      objectReference: {fileID: 504220360}
+    - target: {fileID: 7861757465711901202, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: typesEnemy.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7861757465711901202, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: typesEnemy.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 27747c4b68b1ae8499a989c6400ee241, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
 --- !u!1 &1687241123
