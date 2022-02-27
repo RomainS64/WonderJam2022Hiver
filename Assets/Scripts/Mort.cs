@@ -26,7 +26,7 @@ public class Mort : MonoBehaviour
 
     public void DisplayMort(bool isLifeDeath = true)
     {
-        UpdateItemPickedUpFromAllTheGame();
+        //UpdateItemPickedUpFromAllTheGame();
         isDead = true;
         mortCanvas.SetActive(true);
         StartCoroutine(LifeDeathCoroutine(isLifeDeath));
