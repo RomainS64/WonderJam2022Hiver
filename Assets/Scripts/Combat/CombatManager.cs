@@ -10,9 +10,11 @@ public class CombatManager : MonoBehaviour
 
     [SerializeField] private GameObject[] actionButtons;
     [SerializeField] private GameObject enemy;
+    [SerializeField] private Transform lootSpawnTransform1, lootSpawnTransform2;
     [SerializeField] private Slider slider;
 
     private Life life;
+    private ItemWorld itemWorldInThePiece1, itemWorldInThePiece2;
 
     private EnemyBehaviour enemyBehaviour;
 
@@ -26,6 +28,8 @@ public class CombatManager : MonoBehaviour
     {
         life = FindObjectOfType<Life>();
         enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
+        lootSpawnTransform1 = GameObject.Find("").transform;
+        lootSpawnTransform2 = GameObject.Find("").transform;
     }
     private void OnEnable()
     {
@@ -108,32 +112,16 @@ public class CombatManager : MonoBehaviour
         Debug.Log("Resultat du combat : " + resultsFight);
         if (resultsFight < 0.5)
         {
-            int multiplier = -2;
-            if (resultsFight < 0.25)
+            int multiplier = -10;
+            if (resultsFight < -0.5)
             {
-                multiplier -= 2;
-                if (resultsFight < 0)
+                multiplier -= 5;
+                if (resultsFight < -1)
                 {
-                    multiplier -= 2;
-                    if (resultsFight < -0.25)
+                    multiplier -= 5;
+                    if (resultsFight < -1.25)
                     {
-                        multiplier -= 4;
-                        if (resultsFight < -0.5)
-                        {
-                            multiplier -= 5;
-                            if (resultsFight < -0.75)
-                            {
-                                multiplier -= 5;
-                                if (resultsFight < -1)
-                                {
-                                    multiplier -= 5;
-                                    if (resultsFight < -1.25)
-                                    {
-                                        multiplier -= 5;
-                                    }
-                                }
-                            }
-                        }
+                        multiplier -= 5;
                     }
                 }
             }
@@ -143,6 +131,11 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
+            itemWorldInThePiece1 = ItemWorld.SpawnItemWorld(lootSpawnTransform1, ItemAssets.Instance.GetRandomItemType());
+            if (resultsFight > 1)
+            {
+                itemWorldInThePiece2 = ItemWorld.SpawnItemWorld(lootSpawnTransform2, ItemAssets.Instance.GetRandomItemType());
+            }
             Debug.Log("aucun dégât");
         }
     }

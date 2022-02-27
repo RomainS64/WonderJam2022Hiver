@@ -1603,7 +1603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &585915336
 Transform:
   m_ObjectHideFlags: 0
@@ -5236,6 +5236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179f976c275b5b545a8c145c9e166cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmittersToStartListeningTo: []
+  EmittersToStopListeningTo: []
   isDefaultListener: 1
   listenerId: 0
 --- !u!20 &1910370362
@@ -5346,9 +5348,11 @@ MonoBehaviour:
     useDefaultListeners: 1
   isEnvironmentAware: 0
   isStaticObject: 0
+  m_Collider: {fileID: 0}
   m_positionOffsetData:
     KeepMe: 0
     positionOffset: {x: 0, y: 0, z: 0}
+  isRegistered: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
 --- !u!1 &1962822135
