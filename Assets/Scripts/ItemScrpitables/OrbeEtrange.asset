@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: OrbeEtrange
   m_EditorClassIdentifier: 
   itemName: "Orbe \xE9trange"
+  nomEstFeminin: 0
   type: 2
-  choosingDialogue: "Pfff c'est juste un orbe... Qu'est-ce que ?! J'ai cru voir quelque
-    chose \xE0 l'int\xE9rieur !"
-  pickUpDialogue: "J'ai l'impression de voir quelque chose en feu s'\xE9craser sur
-    une plan\xE8te... Je devrais le garder..."
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  choosingDialogue: "Mmmh, juste une boule en m\xE9tal... Qu'est-ce que ?! J'ai cru
+    voir quelque chose \xE0 l'int\xE9rieur !"
+  pickUpDialogue: "J'ai l'impression de voir quelque chose briller et dispara\xEEtre
+    sur une plan\xE8te... Je vais le garder..."
+  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 3}

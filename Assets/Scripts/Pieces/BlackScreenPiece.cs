@@ -56,7 +56,7 @@ public class BlackScreenPiece : Piece
 
     private void FadeInBackAndStartChoice()
     {
-        FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue, pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
+        //FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue, pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
 
         FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.2f, -1);
     }

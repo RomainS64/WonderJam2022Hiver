@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DoigtDeRobot
   m_EditorClassIdentifier: 
   itemName: Doigt de Robot
+  nomEstFeminin: 0
   type: 5
   choosingDialogue: "Je me demande \xE0 quel robot appartient ce doigt"
-  pickUpDialogue: On ne sait jamais...
+  pickUpDialogue: Il m'intringue... Je le garde avec moi.
   sprite: {fileID: 0}

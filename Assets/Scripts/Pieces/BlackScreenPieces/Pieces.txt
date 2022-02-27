@@ -1,27 +1,39 @@
 Pièce 1 / Le Mirage
 
 En entamant mon entrée dans la salle suivante je regarde instinctivement par-dessus mon épaule.
-Je ne saurais décrire si ce qui m'observe à l'autre bout du couloir rélève d'un mirage ou d'une ombre fantasmée.
-La seule chose que je comprends est qu'elle me fait peur. Et essayer de l'observer me donne des vertiges insupportables.
+Je ne saurais décrire si ce qui m'observe au coin de la pièce rélève d'un mirage ou d'une ombre fantasmée.
+La seule chose que je comprends est qu'elle me fait peur. Et essayer de l'observer me donne un mal de crâne insupportables.
 
 Choix : l'ignorer, se rapprocher
 
 L'ignorer : 
-Je sais qu'elle est derrière moi et elle ne me fera rien. N'est-ce pas ?
+Elle ne bouge pas. Elle est derrière moi et ne me fera rien. N'est-ce pas ?
 *dégâts mentaux*
 
 Se rapprocher:
 J'arrive tant bien que mal à me diriger vers le mirage. Quand je pense être à ses pieds il se volatilise. Il n'y avait peut-être rien, finalement.
 *dégâts physiques*
 
-Pièce 2 / La dimension noire
+Pièce 2 / Les mains
 
-AH ! Je ne vois plus rien ! J'entends des marmonnements lointains à ma gauche.
+Il y a un étrange dispositif sur ma droite. C'est un cadran contenant deux symbole ressemblant à des mains.
+Le symbole de main à gauche est légérement illuminé en violet, la main à droite brille en rouge.
+
+Choix:
+Poser ses mains dessus. -> intervertir mental et vie.
+Passer son chemin. -> sale suivante
+
+
+-------------------------------
+
+Pièce 3 / La dimension noire
+
+J'entends des marmonnements lointains à ma gauche...
 
 Choix : Aller à gauche, aller à droite.
 
 Aller à droite : changer de salle
-Aller à gauche : J'entends des marmonnements lointains à ma (gauche / droite).
+Aller à gauche : Les marmonnements continuent, plus forts, à (gauche / droite).
 *perte de N mental*
 
 Gauche / Droite : changer de salle random / Par là, à ma (gauche / droite).
@@ -36,7 +48,5 @@ Gauche / Droite : changer de salle random / Ils sont là, tout près, (gauche / dr
 Gauche / Droite : changer de salle random / Juste derrière, à (gauche / droite). J'en suis certain.
 *perte de 16N mental*
 
-Gauche / Droite : changer de salle random / AH ! -> changer de salle vers salle unique monstre unique.
+Gauche / Droite : changer de salle random / AH ! -> changer de salle vers salle et monstre unique. Fin salle noire
 
-
-Pièce 3 / Froid
