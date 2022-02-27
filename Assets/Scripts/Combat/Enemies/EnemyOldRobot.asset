@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c9b7b0cd9b4e6940b180108c3c49baf, type: 3}
   m_Name: EnemyOldRobot
   m_EditorClassIdentifier: 
-  enemyName: EnemyOldRobot
+  enemyName: Vieux Robot
   weight: 5
   attack: 4
   armor: 1

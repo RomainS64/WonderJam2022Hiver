@@ -7,7 +7,11 @@ public class ItemObject : ScriptableObject
     {
         Bandage,
         Veste,
-        OrbeEtrange
+        OrbeEtrange,
+        PorteClefEiffel,
+        JoyauxIncandescent,
+        DoigtDeRobot,
+        PelucheEtrange
     }
 
     public string itemName;
