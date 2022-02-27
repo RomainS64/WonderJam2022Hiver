@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 849efbf4d401aa641948426f19da3818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: Menu
   endSound: {fileID: 166805341}
   timeBeforeEndSound: 1.5
   fadeCanvas: {fileID: 1954523500}
