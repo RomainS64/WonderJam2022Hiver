@@ -3941,13 +3941,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typesDePieces:
-  - {fileID: 1645042486}
-  - {fileID: 1784761873}
-  - {fileID: 585915337}
-  - {fileID: 1436424220}
-  - {fileID: 619003457}
-  - {fileID: 803827793}
-  - {fileID: 324250560}
+  - piece: {fileID: 1645042486}
+    ponderation: 10
+  - piece: {fileID: 803827793}
+    ponderation: 32
+  - piece: {fileID: 585915337}
+    ponderation: 13
+  - piece: {fileID: 1784761873}
+    ponderation: 10
+  - piece: {fileID: 324250560}
+    ponderation: 10
+  - piece: {fileID: 1436424220}
+    ponderation: 7
+  - piece: {fileID: 619003457}
+    ponderation: 2
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0

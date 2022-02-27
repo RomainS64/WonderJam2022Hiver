@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[Serializable]
+public class PieceAndPonderation
+{
+    public Piece piece;
+    public int ponderation;
+}
 public class PieceManager : MonoBehaviour
 {
-    [SerializeField] private Piece[] typesDePieces;
+    [SerializeField] private PieceAndPonderation[] typesDePieces;
     private Piece leftPiece,rightPiece;
     private List<Piece> pieceHistory;
     private bool isLeftPieceSelected;
@@ -52,11 +60,14 @@ public class PieceManager : MonoBehaviour
     //Retourne une piece au hasard mais qui n'est pas égale aux deux dernieres piece (sauf si c'est un monstre)
     private Piece GetRandomPiece()
     {
-        Piece randomPiece = typesDePieces[Random.Range(0, typesDePieces.Length)];
-        return randomPiece;
-    }
-    void Update()
-    {
-        
+        int rdmValue = UnityEngine.Random.Range(1, 101);
+        int currentValue = 0;
+        for(int i = 0; i < typesDePieces.Length; i++)
+        {
+            currentValue += typesDePieces[i].ponderation;
+            if (rdmValue <= currentValue) return typesDePieces[i].piece;
+        }
+        return typesDePieces[0].piece;
+
     }
 }
