@@ -69,14 +69,6 @@ public class BSPiece_BlackRoom : BlackScreenPiece
     {
         currentIniniteRoomIndex = 0;
 
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.JoyauxIncandescent);
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.DoigtDeRobot);
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.StatuetteGuide);
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.OrbeEtrange);
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.HoloparcheminEndommage);
-        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.PelucheEtrange);
-
-
         FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.0025f, -1);
 
         StartGaucheDroiteChoice();
