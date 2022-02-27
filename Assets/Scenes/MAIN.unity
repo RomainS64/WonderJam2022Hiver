@@ -423,11 +423,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7edf9306cb4c57a42955b98d0ef3d59f, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 96eed20886b182241b32e66a8d33cfd1, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -899,11 +899,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7edf9306cb4c57a42955b98d0ef3d59f, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 96eed20886b182241b32e66a8d33cfd1, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1729,11 +1729,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7edf9306cb4c57a42955b98d0ef3d59f, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 96eed20886b182241b32e66a8d33cfd1, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1741,8 +1741,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hmmm.... je suis suis un placeholder de text. c'est une sorte de lorem
-    ipsum mais en encore mieux ! hihi je suis gay ! euh... gai gai !
+  m_Text: 
 --- !u!222 &444595257
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6498,11 +6497,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 7edf9306cb4c57a42955b98d0ef3d59f, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 96eed20886b182241b32e66a8d33cfd1, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
