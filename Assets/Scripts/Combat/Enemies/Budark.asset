@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Budark
   weight: 5
-  attack: 5
-  armor: 0
+  attack: 4
+  armor: 1
   bigArmor: 1
   enemySprite: {fileID: 21300000, guid: 458af7607a69e6d429f658b27cb44214, type: 3}
   enemyAnimatorController: {fileID: 0}
