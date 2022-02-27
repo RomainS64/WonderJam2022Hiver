@@ -107,7 +107,7 @@ public class CombatManager : MonoBehaviour
         roundCount++;
         if (roundCount >= 5)
         {
-            EndFight();
+            Invoke(nameof(EndFight),1f);
         }
     }
 

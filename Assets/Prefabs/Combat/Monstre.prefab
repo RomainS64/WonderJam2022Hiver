@@ -43,3 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e340b02dd77fe1a4f9de68da006ee51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseArmor: 1
+  bigArmor: 2
+  attack: 1
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
+  enemyActions: []

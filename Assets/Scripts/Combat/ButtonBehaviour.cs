@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
 
 public class ButtonBehaviour : MonoBehaviour
@@ -43,6 +44,7 @@ public class ButtonBehaviour : MonoBehaviour
         {
             playerArmor = ArmorManager.GetArmor();
             playerAttack = AttackManager.GetAttack();
+            FindObjectOfType<AudioManager>().Play("AttackPlayer");
             Debug.Log("Joueur attaque");
         }
         else

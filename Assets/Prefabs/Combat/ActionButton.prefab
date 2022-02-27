@@ -109,4 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6385c65aa3a1745b8c9d46dd44a74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDefense: 0
+  isAttack: 0
   spriteBoutonUtilise: {fileID: 21300000, guid: 584f3ef996501fa4c98c194ba9175eb3, type: 3}
+  spriteBoutonPossible: {fileID: 0}

@@ -30,11 +30,13 @@ public class ChienPiece : Piece
         if (isDocile) {
             chienSprite.sprite = chienMimi;
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocile1);
+            FindObjectOfType<AudioManager>().Play("FrindlyBot");
         }
         else
         {
             chienSprite.sprite = chienMechant;
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechant1);
+            FindObjectOfType<AudioManager>().Play("BadBot");
         }
     }
     private void Update()
@@ -81,6 +83,7 @@ public class ChienPiece : Piece
     }
     public void Attaquer()
     {
+        FindObjectOfType<AudioManager>().Play("KickCH13n");
         if (isDocile)
         {
             int rdm = Random.Range(0, 2);
