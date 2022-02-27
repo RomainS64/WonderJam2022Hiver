@@ -30,7 +30,7 @@ public class ChienPiece : Piece
         if (isDocile) {
             chienSprite.sprite = chienMimi;
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocile1);
-            FindObjectOfType<AudioManager>().Play("FrindlyBot");
+            FindObjectOfType<AudioManager>().Play("FriendlyBot");
         }
         else
         {
@@ -56,6 +56,7 @@ public class ChienPiece : Piece
     {
         if (isDocile)
         {
+            FindObjectOfType<AudioManager>().Play("LoveCH13n");
             int rdm = Random.Range(0, 2);
             if (rdm > 0  || FindObjectOfType<Familier>().HaveChien)
             {
@@ -74,6 +75,7 @@ public class ChienPiece : Piece
         }
         else
         {
+            FindObjectOfType<AudioManager>().Play("HittedCH13n");
             ScreenShake.Shake(0.3f, 1f);
             life.TakeDamage(chienDamage);
             FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienMechantCaresse1);
@@ -90,6 +92,7 @@ public class ChienPiece : Piece
             if (rdm > 0)
             {
                 ScreenShake.Shake(0.3f, 1f);
+                FindObjectOfType<AudioManager>().Play("HittedCH13n");
                 life.TakeDamage(chienDamage);
                 FindObjectOfType<Pensees>().StartPensee(DIALOGUES.chienDocileAttaque1);
                 spriteChien.SetActive(false);
