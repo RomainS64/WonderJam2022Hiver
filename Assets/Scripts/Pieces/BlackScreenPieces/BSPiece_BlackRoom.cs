@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BSPiece_BlackRoom : BlackScreenPiece
 {
@@ -31,12 +32,52 @@ public class BSPiece_BlackRoom : BlackScreenPiece
     [SerializeField]
     private float mentalMultiplicatorOfMultiplicator;
 
+    [TextArea]
+    [SerializeField]
+    private string finLamainVousDemandeLes6Artefacts;
+
+    [TextArea]
+    [SerializeField]
+    private string finChoixDonnerArtefact;
+
+    [TextArea]
+    [SerializeField]
+    private string finChoixRefuserDonnerArtéfact;
+
+    [TextArea]
+    [SerializeField]
+    private string finPasAssezArtefact;
+
+    [TextArea]
+    [SerializeField]
+    private string[] finAssezArtefact;
+
+    [SerializeField]
+    private ItemObject grenouilleItemObject;
+
+    [SerializeField]
+    private GameObject mainGeanteObject;
+
     private int currentIniniteRoomIndex;
     private DoorDirection nextInfiniteDoorDirection;
+
+    private void Start()
+    {
+        base.Start();
+        mainGeanteObject.SetActive(false);
+    }
 
     public override void StartDialogues()
     {
         currentIniniteRoomIndex = 0;
+
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.JoyauxIncandescent);
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.DoigtDeRobot);
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.StatuetteGuide);
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.OrbeEtrange);
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.HoloparcheminEndommage);
+        FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(ItemObject.ItemType.PelucheEtrange);
+
 
         FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.0025f, -1);
 
@@ -134,14 +175,56 @@ public class BSPiece_BlackRoom : BlackScreenPiece
         {
             mental.TakeMentalDamage(Mathf.FloorToInt(doomRoomMentalDamage * mentalMultiplicator));
             mentalMultiplicator *= mentalMultiplicatorOfMultiplicator;
+            ScreenShake.Shake(0.3f, 1f);
             StartGaucheDroiteChoice();
         }
     }
    
     private void GoToUltimateRoom()
     {
-        base.ChoiceLeft();//FADE OUT
+        //base.ChoiceLeft();//FADE OUT
+        ShowMain();
 
-        Debug.Log("I go to the ultimate room");
+        FindObjectOfType<Choise>().StartChoise(
+            finLamainVousDemandeLes6Artefacts, finChoixDonnerArtefact, finChoixRefuserDonnerArtéfact, DonneArtefacts, RefuserDonnerArtefacts
+        );
+    }
+
+    private void DonneArtefacts()
+    {
+        if (FindObjectOfType<PlayerTestForInventory>().Inventory.IsInvenrotyFullArtefactsFound())
+        {
+            HideMain();
+            FindObjectOfType<Pensees>().StartPensee(finAssezArtefact, () => {
+                FindObjectOfType<PlayerTestForInventory>().Inventory.ClearInventory();
+                FindObjectOfType<PlayerTestForInventory>().Inventory.AddItem(grenouilleItemObject);
+                mental.TakeMentalDamage(100000);
+            });
+        }
+        else
+        {
+            FindObjectOfType<Pensees>().StartPensee(finPasAssezArtefact, () => {
+                HideMain();
+                base.ChoiceLeft();
+            });
+        }
+    }
+
+    private void RefuserDonnerArtefacts()
+    {
+        FindObjectOfType<Pensees>().StartPensee(finChoixRefuserDonnerArtéfact, () => {
+            HideMain();
+            base.ChoiceLeft();
+        });
+    }
+
+    private void ShowMain()
+    {
+        mainGeanteObject.SetActive(true);
+    }
+
+    private void HideMain()
+    {
+        mainGeanteObject.SetActive(false);
     }
 }

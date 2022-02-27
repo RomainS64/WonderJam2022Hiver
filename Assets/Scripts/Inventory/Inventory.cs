@@ -22,6 +22,16 @@ public class Inventory
         DisplayInventoryInConsole();
     }
 
+    public void AddItem(ItemObject newItem)
+    {
+        if (newItem != null)
+        {
+            items.Add(newItem);
+        }
+
+        DisplayInventoryInConsole();
+    }
+
     public void RemoveItem(ItemObject item)
     {
         if (items.Contains(item))
@@ -92,5 +102,10 @@ public class Inventory
         }
 
         return itemObejctsCopy;
+    }
+
+    public bool IsInvenrotyFullArtefactsFound()
+    {
+        return GetAllDifferantItems().Count >= 6;
     }
 }
