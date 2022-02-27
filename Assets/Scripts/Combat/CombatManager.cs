@@ -80,6 +80,7 @@ public class CombatManager : MonoBehaviour
                 playerAttack *= 2;
             }
             isCharged = false;
+            Debug.Log("La capacité est chargée : " + isCharged);
         }
         Debug.Log("Armure Joueur : " + playerArmor + " Armure Ennemi : " + enemyBehaviour.EnemyArmor);
         Debug.Log("Attaque Joueur : " + playerAttack + " Attaque Ennemi : " + enemyBehaviour.EnemyAttack);
@@ -90,6 +91,7 @@ public class CombatManager : MonoBehaviour
         {
             isCharged = true;
             buttonBehaviour.IsCharging = false;
+            Debug.Log("La capacité est chargée : " + isCharged);
         }
     }
 

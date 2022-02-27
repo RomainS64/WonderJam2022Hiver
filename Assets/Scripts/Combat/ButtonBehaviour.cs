@@ -35,7 +35,7 @@ public class ButtonBehaviour : MonoBehaviour
         //Debug.Log("La capacité est en train de charger " + isCharging);
         if (isDefense)
         {
-            playerArmor = ArmorManager.GetArmor() * 2;
+            playerArmor = ArmorManager.GetArmor();
             playerAttack = 0;
             Debug.Log("Joueur se défend");
         }
