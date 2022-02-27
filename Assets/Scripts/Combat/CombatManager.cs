@@ -14,7 +14,10 @@ public class CombatManager : MonoBehaviour
     [SerializeField] private Slider slider;
 
     private Life life;
+<<<<<<< Updated upstream
     private ItemWorld itemWorldInThePiece1, itemWorldInThePiece2;
+=======
+>>>>>>> Stashed changes
 
     private EnemyBehaviour enemyBehaviour;
 
@@ -112,6 +115,7 @@ public class CombatManager : MonoBehaviour
         Debug.Log("Resultat du combat : " + resultsFight);
         if (resultsFight < 0.5)
         {
+<<<<<<< Updated upstream
             int multiplier = -10;
             if (resultsFight < -0.5)
             {
@@ -124,6 +128,36 @@ public class CombatManager : MonoBehaviour
                         multiplier -= 5;
                     }
                 }
+=======
+            int multiplier = -1;
+            if (resultsFight < 0.25)
+            {
+                multiplier -= 2;
+                if (resultsFight < 0)
+                {
+                    multiplier -= 2;
+                    if (resultsFight < -0.25)
+                    {
+                        multiplier -= 2;
+                    }
+                        if (resultsFight < -0.5)
+                        {
+                            multiplier -= 2;
+                        }
+                            if (resultsFight < -0.75)
+                            {
+                                multiplier -= 2;
+                            }
+                                if (resultsFight < -1)
+                                {
+                                    multiplier -= 2;
+                                }
+                                    if (resultsFight < -1.25)
+                                    {
+                                        multiplier -= 2;
+                                    }
+                        }
+>>>>>>> Stashed changes
             }
             damage = (int)((slider.minValue + resultsFight) * multiplier);
             Debug.Log("Dégât prit : " + damage);
@@ -131,11 +165,14 @@ public class CombatManager : MonoBehaviour
         }
         else
         {
+<<<<<<< Updated upstream
             itemWorldInThePiece1 = ItemWorld.SpawnItemWorld(lootSpawnTransform1, ItemAssets.Instance.GetRandomItemType());
             if (resultsFight > 1)
             {
                 itemWorldInThePiece2 = ItemWorld.SpawnItemWorld(lootSpawnTransform2, ItemAssets.Instance.GetRandomItemType());
             }
+=======
+>>>>>>> Stashed changes
             Debug.Log("aucun dégât");
         }
     }
