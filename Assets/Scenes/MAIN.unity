@@ -6940,9 +6940,9 @@ MonoBehaviour:
     pitch: 1.5
     source: {fileID: 0}
   - name: ChargePlayer
-    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
+    clip: {fileID: 8300000, guid: 64c08d7cd20df304da74e5e19943c332, type: 3}
     volume: 0.25
-    pitch: 1.75
+    pitch: 1
     source: {fileID: 0}
   - name: FriendlyBot
     clip: {fileID: 8300000, guid: b7d2cd12c203fa94fb78cb91d539b2f6, type: 3}
@@ -6955,7 +6955,7 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: TakeLoot
-    clip: {fileID: 8300000, guid: 54c56b9deedba5648b026a3fd1e0a7e1, type: 3}
+    clip: {fileID: 8300000, guid: 96071238b25256d43bf70694df277f89, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -6965,12 +6965,12 @@ MonoBehaviour:
     pitch: 1
     source: {fileID: 0}
   - name: CrystalHeal
-    clip: {fileID: 8300000, guid: 321d8c84a18359949a183922d9092ae9, type: 3}
+    clip: {fileID: 8300000, guid: 277a40d5cd4747f4785beb39dceb3211, type: 3}
     volume: 0.5
-    pitch: 2
+    pitch: 1
     source: {fileID: 0}
   - name: CrystalCurse
-    clip: {fileID: 8300000, guid: 0ebc4bdad9e605f42b292ed25c267381, type: 3}
+    clip: {fileID: 8300000, guid: 84a89b7c321054547a989250312556ca, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
@@ -6985,9 +6985,9 @@ MonoBehaviour:
     pitch: 1.25
     source: {fileID: 0}
   - name: ChargeEnemy
-    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
+    clip: {fileID: 8300000, guid: d00a8d6e30981104d8c165362d346f83, type: 3}
     volume: 0.25
-    pitch: 1.25
+    pitch: 1
     source: {fileID: 0}
 --- !u!1 &1784761871
 GameObject:
