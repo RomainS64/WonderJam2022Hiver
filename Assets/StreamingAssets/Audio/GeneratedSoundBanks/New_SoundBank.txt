@@ -1,6 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3783393979	playProut			\Default Work Unit\playProut	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	695413017	prout	F:\devJeux\SonWonderJam2022Hiver\Son\.cache\Windows\SFX\hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\prout		223172
-
