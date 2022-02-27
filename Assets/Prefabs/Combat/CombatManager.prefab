@@ -59,6 +59,7 @@ MonoBehaviour:
   slider: {fileID: 3180217350737272094}
   typesEnemy:
   - {fileID: 11400000, guid: 64c2b24a97a09d64a9e3e06ec58d038e, type: 2}
+  - {fileID: 11400000, guid: 796963c5333d7f442a38c2d87f62599b, type: 2}
 --- !u!1 &5267563200610770491
 GameObject:
   m_ObjectHideFlags: 0

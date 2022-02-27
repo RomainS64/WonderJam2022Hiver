@@ -4696,10 +4696,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nbSalleUI: {fileID: 1491887352}
   typesDePieces:
+  - piece: {fileID: 803827793}
+    ponderation: 320
   - piece: {fileID: 1645042486}
     ponderation: 5
-  - piece: {fileID: 803827793}
-    ponderation: 32
   - piece: {fileID: 585915337}
     ponderation: 13
   - piece: {fileID: 1784761873}
@@ -6968,6 +6968,18 @@ PrefabInstance:
     - target: {fileID: 2869222163503071553, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3180217349889235646, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3906890391418231147, guid: 1dcff923c7423ad4986a71b28513dd28, type: 3}
       propertyPath: spriteRenderer
