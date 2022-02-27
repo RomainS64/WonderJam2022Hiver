@@ -3059,7 +3059,7 @@ MonoBehaviour:
   leftDoor: {fileID: 1873575360}
   rightDoor: {fileID: 357339481}
   backgroundAlphaRatio: 0.6
-  pieceEnterDialogue: Oui
+  pieceEnterDialogue: 
   pieceChoiceLeft: Left
   pieceChoiceRight: Right
 --- !u!1 &989945347
@@ -3372,11 +3372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   typesDePieces:
-  - {fileID: 803827793}
-  - {fileID: 324250560}
-  - {fileID: 619003457}
-  - {fileID: 585915337}
-  - {fileID: 1645042486}
+  - {fileID: 987334983}
 --- !u!4 &1086839999
 Transform:
   m_ObjectHideFlags: 0
@@ -3594,19 +3590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8324265497068684985fdd96f5966b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitializationSettings: {fileID: 11400000, guid: c5eb0495938b3934a95ad97fc595ba78, type: 2}
-  basePath: 
-  language: 
-  defaultPoolSize: 0
-  lowerPoolSize: 0
-  streamingPoolSize: 0
-  memoryCutoffThreshold: 0
-  monitorPoolSize: 0
-  monitorQueuePoolSize: 0
-  callbackManagerBufferSize: 0
-  spatialAudioPoolSize: 0
-  maxSoundPropagationDepth: 0
-  engineLogging: 0
 --- !u!4 &1247912842
 Transform:
   m_ObjectHideFlags: 0
@@ -4587,7 +4570,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &1544488139
 RectTransform:
@@ -5671,10 +5654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179f976c275b5b545a8c145c9e166cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmittersToStartListeningTo: []
-  EmittersToStopListeningTo: []
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!20 &1910370362
 Camera:
   m_ObjectHideFlags: 0
@@ -5778,18 +5757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95449a9f5652e4243a05882e073fc321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 0
-  isStaticObject: 0
-  m_Collider: {fileID: 0}
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  isRegistered: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1962822135
 GameObject:
   m_ObjectHideFlags: 0

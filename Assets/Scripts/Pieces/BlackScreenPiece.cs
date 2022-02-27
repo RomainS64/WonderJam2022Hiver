@@ -8,7 +8,7 @@ public class BlackScreenPiece : Piece
     [SerializeField]
     protected float backgroundAlphaRatio = 0.6f;
 
-    [Multiline(10)]
+    [TextArea]
     [SerializeField]
     protected string pieceEnterDialogue;
 
@@ -55,7 +55,7 @@ public class BlackScreenPiece : Piece
     {
         FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue, pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
 
-        //FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.2f, -1);
+        FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.2f, -1);
     }
 
     private void FadeOut()
