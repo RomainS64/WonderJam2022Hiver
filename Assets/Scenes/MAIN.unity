@@ -6956,7 +6956,7 @@ MonoBehaviour:
   - name: CrystalHeal
     clip: {fileID: 8300000, guid: 277a40d5cd4747f4785beb39dceb3211, type: 3}
     volume: 0.5
-    pitch: 2
+    pitch: 1
     source: {fileID: 0}
   - name: CrystalCurse
     clip: {fileID: 8300000, guid: 84a89b7c321054547a989250312556ca, type: 3}
