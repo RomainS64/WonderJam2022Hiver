@@ -74,6 +74,7 @@ public class EnemyBehaviour : MonoBehaviour
                 EnemyArmor = baseArmor;
                 EnemyAttack = 0;
                 enemyIsCharged = true;
+                FindObjectOfType<AudioManager>().Play("ChargeEnemy");
                 break;
             case ActionType.Defence:
                 EnemyArmor = bigArmor;
@@ -83,6 +84,7 @@ public class EnemyBehaviour : MonoBehaviour
                     EnemyArmor *= 2;
                     enemyIsCharged = false;
                 }
+                FindObjectOfType<AudioManager>().Play("DefenceEnemy");
                 break;
         }
     }

@@ -6964,12 +6964,17 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     source: {fileID: 0}
-  - name: Heal
+  - name: KickCH13n
+    clip: {fileID: 8300000, guid: 0ebc4bdad9e605f42b292ed25c267381, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: CrystalHeal
     clip: {fileID: 8300000, guid: 321d8c84a18359949a183922d9092ae9, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
-  - name: KickCH13n
+  - name: CrystalCurse
     clip: {fileID: 8300000, guid: 0ebc4bdad9e605f42b292ed25c267381, type: 3}
     volume: 0.5
     pitch: 1
