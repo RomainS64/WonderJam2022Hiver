@@ -23,6 +23,7 @@ public class BSPiece_Intervertion : BlackScreenPiece
         int currentHeal = life.GetLife();
         int currentMental = mental.GetMental();
 
+        ScreenShake.Shake(0.3f, 0.3f);
         life.SetHealth(currentMental);
         mental.SetMental(currentHeal);
 
