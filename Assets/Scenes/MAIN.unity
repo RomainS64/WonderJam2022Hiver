@@ -1705,7 +1705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.22860718, y: -1.6753082}
+  m_AnchoredPosition: {x: 0.2286377, y: -1.675293}
   m_SizeDelta: {x: -59.4988, y: -30.9219}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444595256
@@ -2042,9 +2042,9 @@ MonoBehaviour:
   choiseCanvas: {fileID: 1073036370}
   leftChosieCollider: {fileID: 1528913771}
   rightChoiseCollider: {fileID: 867047836}
-  choiseBG: {fileID: 0}
-  choiseLBG: {fileID: 0}
-  choiseRBG: {fileID: 0}
+  choiseBG: {fileID: 1518432065}
+  choiseLBG: {fileID: 2003232714}
+  choiseRBG: {fileID: 674178717}
   choiseTxt: {fileID: 262642522}
   choiseLTxt: {fileID: 1575894477}
   choiseRTxt: {fileID: 162333919}
