@@ -38,21 +38,21 @@ public class ButtonBehaviour : MonoBehaviour
         {
             playerArmor = ArmorManager.GetArmor();
             playerAttack = 0;
-            FindObjectOfType<AudioManager>().Play("DefencePlayer");
+            FindObjectOfType<AudioManager>().Play("DefencePlayer", false);
             Debug.Log("Joueur se défend");
         }
         else if (isAttack)
         {
             playerArmor = (int)(ArmorManager.GetArmor()/2);
             playerAttack = AttackManager.GetAttack();
-            FindObjectOfType<AudioManager>().Play("AttackPlayer");
+            FindObjectOfType<AudioManager>().Play("AttackPlayer", false);
             Debug.Log("Joueur attaque");
         }
         else
         {
             playerArmor = (int)(ArmorManager.GetArmor()/2);
             playerAttack = 0;
-            FindObjectOfType<AudioManager>().Play("ChargePlayer");
+            FindObjectOfType<AudioManager>().Play("ChargePlayer", false);
             isCharging = true;
             Debug.Log("La prochaine capacité sera multipliée par 2 !!!");
         }

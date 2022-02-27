@@ -27,7 +27,7 @@ public class BSPiece_Mirage : BlackScreenPiece
         Debug.Log("Je perds de la vie olala");
 
         life.TakeDamage(degatsPhysiques);
-
+        ScreenShake.Shake(0.3f, 1f);
         FindObjectOfType<Pensees>().StartPensee(choiceLeftDialogue, () => {
             base.ChoiceLeft();
         });
@@ -38,7 +38,7 @@ public class BSPiece_Mirage : BlackScreenPiece
         Debug.Log("Je perds du mental olala");
 
         mental.TakeMentalDamage(degatsMentaux);
-
+        ScreenShake.Shake(0.3f, 1f);
         FindObjectOfType<Pensees>().StartPensee(choiceRightDialogue, () => {
             base.ChoiceRight();
         });

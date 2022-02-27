@@ -399,7 +399,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.22851562, y: 0.2534027}
+  m_AnchoredPosition: {x: 0.22851562, y: 0.25341797}
   m_SizeDelta: {x: -22.8533, y: -8.7417}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162333919
@@ -938,7 +938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.253479, y: 0.012298584}
+  m_AnchoredPosition: {x: -0.25341797, y: 0.012329102}
   m_SizeDelta: {x: -51.7839, y: -16.9387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &292298363
@@ -5027,7 +5027,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -83.462036, y: -2.6330872}
+  m_AnchoredPosition: {x: -83.462036, y: -2.6330566}
   m_SizeDelta: {x: -655.4949, y: -412.7231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1268228308
@@ -6237,7 +6237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.1929016, y: -0.4698639}
+  m_AnchoredPosition: {x: 1.1928711, y: -0.46984863}
   m_SizeDelta: {x: -23.8176, y: -10.1882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575894477
@@ -6923,6 +6923,16 @@ MonoBehaviour:
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
+  - name: DefencePlayer
+    clip: {fileID: 8300000, guid: 491a2e627f22d1246a91b5334f64b76b, type: 3}
+    volume: 0.15
+    pitch: 1.5
+    source: {fileID: 0}
+  - name: ChargePlayer
+    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
+    volume: 0.25
+    pitch: 1.75
+    source: {fileID: 0}
   - name: FriendlyBot
     clip: {fileID: 8300000, guid: b7d2cd12c203fa94fb78cb91d539b2f6, type: 3}
     volume: 0.2
@@ -6930,11 +6940,6 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BadBot
     clip: {fileID: 8300000, guid: dd04a7a97d8a0f54bbf9664d554d160b, type: 3}
-    volume: 0.2
-    pitch: 1
-    source: {fileID: 0}
-  - name: AttackEnemy
-    clip: {fileID: 8300000, guid: 18bcf9cdccbe4e14e9ccef1a63d3e0f7, type: 3}
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
@@ -6951,12 +6956,27 @@ MonoBehaviour:
   - name: CrystalHeal
     clip: {fileID: 8300000, guid: 321d8c84a18359949a183922d9092ae9, type: 3}
     volume: 0.5
-    pitch: 1
+    pitch: 2
     source: {fileID: 0}
   - name: CrystalCurse
     clip: {fileID: 8300000, guid: 0ebc4bdad9e605f42b292ed25c267381, type: 3}
     volume: 0.5
     pitch: 1
+    source: {fileID: 0}
+  - name: AttackEnemy
+    clip: {fileID: 8300000, guid: 18bcf9cdccbe4e14e9ccef1a63d3e0f7, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - name: DefenceEnemy
+    clip: {fileID: 8300000, guid: 491a2e627f22d1246a91b5334f64b76b, type: 3}
+    volume: 0.15
+    pitch: 1.25
+    source: {fileID: 0}
+  - name: ChargeEnemy
+    clip: {fileID: 8300000, guid: 2f79ba8df22d333448edcb7f28650186, type: 3}
+    volume: 0.25
+    pitch: 1.25
     source: {fileID: 0}
 --- !u!1 &1784761871
 GameObject:
@@ -8160,7 +8180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 111.45999, y: -2.6330872}
+  m_AnchoredPosition: {x: 111.45996, y: -2.6330566}
   m_SizeDelta: {x: -655.4949, y: -412.7231}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1977909243
