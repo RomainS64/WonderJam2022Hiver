@@ -2098,7 +2098,7 @@ MonoBehaviour:
   continueTxt: {fileID: 1890316244}
   itemSpriteContainerPrefab: {fileID: 3458903589803119520, guid: e95dad2f97fdb4444902ab66ae700310, type: 3}
   itemsContainerParent: {fileID: 122928726}
-  textCompteurSalles: {fileID: 0}
+  textCompteurSalles: {fileID: 1312817646}
 --- !u!4 &544741626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6127190018257711540, guid: 71197bc9ce775df4ba6ebd8a52b6c084, type: 3}
@@ -4657,7 +4657,7 @@ MonoBehaviour:
   - piece: {fileID: 2061172019}
     ponderation: 6
   - piece: {fileID: 800730960}
-    ponderation: 1000
+    ponderation: 8
   firstPiece: {fileID: 242383036}
 --- !u!4 &1086839999
 Transform:
@@ -5038,6 +5038,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1268228306}
   m_CullTransparentMesh: 1
+--- !u!114 &1312817646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2691194908252855311, guid: c5bfa58d57bb17e4ca7417b821420f72, type: 3}
+  m_PrefabInstance: {fileID: 292298363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1332057412
 GameObject:
   m_ObjectHideFlags: 0
@@ -6797,8 +6808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 7, y: -104}
+  m_SizeDelta: {x: 544.8221, y: 332.4279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1670030728
 MonoBehaviour:
@@ -6820,7 +6831,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 8aef1725d4318f74c9d0b82aa6bb6856, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8944,12 +8955,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1670030726}
     - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: grenouilleItemObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 53621b2e0515325448bb725c8cf46a6f, type: 2}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
       propertyPath: finJrefuseDeDonnerArtefact
       value: "Apr\xE8s quelques instants la main se retire...."
       objectReference: {fileID: 0}
     - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: finAssezArtefact.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: finAssezArtefact.Array.data[1]
+      value: La main revient. Elle veut me donner quelque chose.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
       propertyPath: finAssezArtefact.Array.data[2]
-      value: AAAAAAH !
+      value: "Je n'ai jamais vu \xE7a auparavant. Qu'est-ce que c'est ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: finAssezArtefact.Array.data[3]
+      value: HH !
       objectReference: {fileID: 0}
     - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
       propertyPath: "finChoixRefuserDonnerArt\xE9fact"
