@@ -46,6 +46,10 @@ public class BSPiece_BlackRoom : BlackScreenPiece
 
     [TextArea]
     [SerializeField]
+    private string finJrefuseDeDonnerArtefact;
+
+    [TextArea]
+    [SerializeField]
     private string finPasAssezArtefact;
 
     [TextArea]
@@ -60,12 +64,6 @@ public class BSPiece_BlackRoom : BlackScreenPiece
 
     private int currentIniniteRoomIndex;
     private DoorDirection nextInfiniteDoorDirection;
-
-    private void Start()
-    {
-        base.Start();
-        mainGeanteObject.SetActive(false);
-    }
 
     public override void StartDialogues()
     {
@@ -186,7 +184,7 @@ public class BSPiece_BlackRoom : BlackScreenPiece
         ShowMain();
 
         FindObjectOfType<Choise>().StartChoise(
-            finLamainVousDemandeLes6Artefacts, finChoixDonnerArtefact, finChoixRefuserDonnerArtéfact, DonneArtefacts, RefuserDonnerArtefacts
+            finLamainVousDemandeLes6Artefacts, finChoixDonnerArtefact, finChoixRefuserDonnerArtéfact, RefuserDonnerArtefacts, DonneArtefacts
         );
     }
 

@@ -8943,6 +8943,18 @@ PrefabInstance:
       propertyPath: mainGeanteObject
       value: 
       objectReference: {fileID: 1670030726}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: finJrefuseDeDonnerArtefact
+      value: "Apr\xE8s quelques instants la main se retire...."
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: finAssezArtefact.Array.data[2]
+      value: AAAAAAH !
+      objectReference: {fileID: 0}
+    - target: {fileID: 4456343129023104127, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
+      propertyPath: "finChoixRefuserDonnerArt\xE9fact"
+      value: Ne rien faire
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c99c892a890eb914ca3ef3396e4aec74, type: 3}
 --- !u!1001 &6127190017726605646
