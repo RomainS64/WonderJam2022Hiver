@@ -21,16 +21,17 @@ public class Mort : MonoBehaviour
     {
         
         isDead = true;
+        mortCanvas.SetActive(true);
         StartCoroutine(LifeDeathCoroutine(isLifeDeath));
     }
     IEnumerator LifeDeathCoroutine(bool isLifeDeath)
     {
         bg.color = new Color(bg.color.r, bg.color.g, bg.color.b,0);
+        fg.color = new Color(fg.color.r, fg.color.g, fg.color.b, 0);
+
         vieTxt.color = new Color(vieTxt.color.r, vieTxt.color.g, vieTxt.color.b, 0);
         mentalTxt.color = new Color(mentalTxt.color.r, mentalTxt.color.g, mentalTxt.color.b, 0);
         continueTxt.color = new Color(continueTxt.color.r, continueTxt.color.g, continueTxt.color.b, 0);
-        fg.color = new Color(fg.color.r, fg.color.g, fg.color.b, 0);
-
         Color step = new Color(0,0,0,1/50f);
 
         for (int i = 0; i < 50; i++)
