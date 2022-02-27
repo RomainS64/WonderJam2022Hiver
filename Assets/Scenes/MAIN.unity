@@ -2011,7 +2011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLife: 100
   slider: {fileID: 2096578815}
-  currentLife: 0
+  currentLife: 100
 --- !u!114 &521785765
 MonoBehaviour:
   m_ObjectHideFlags: 0

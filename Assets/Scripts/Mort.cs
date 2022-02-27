@@ -84,7 +84,7 @@ public class Mort : MonoBehaviour
         foreach (var item in itemsCopy)
         {
             Instantiate(itemSpriteContainerPrefab, itemsContainerParent.transform);
-            itemsContainerParent.transform.GetComponent<SpriteRenderer>().sprite = item.sprite;
+            itemSpriteContainerPrefab.transform.GetComponent<SpriteRenderer>().sprite = item.sprite;
         }
     }
 }
