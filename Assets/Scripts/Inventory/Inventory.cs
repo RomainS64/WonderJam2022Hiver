@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Inventory
 {
-    private List<ItemObject> items;
-    public List<ItemObject> Items => items;
+    public List<ItemObject> items;
 
     public Inventory()
     {
@@ -27,6 +26,7 @@ public class Inventory
     {
         if (items.Contains(item))
         {
+            Debug.Log("Je Remove");
             items.Remove(item);
         }
     }

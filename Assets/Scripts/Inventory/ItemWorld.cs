@@ -18,6 +18,7 @@ public class ItemWorld : MonoBehaviour
 
     public static ItemWorld SpawnItemWorld(Transform transformSpawnPoint, ItemObject.ItemType itemToSpawnType)
     {
+        
         Transform transf = Instantiate(
             ItemAssets.Instance.itemWorldPrefab,
             transformSpawnPoint.position,

@@ -22,8 +22,10 @@ public class TresorPiece : Piece
     protected void OnEnable()
     {
         SetAttackSprite();
-
-        itemWorldInThePiece = ItemWorld.SpawnItemWorld(tresorSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+        if(itemWorldInThePiece == null)
+        {
+            itemWorldInThePiece = ItemWorld.SpawnItemWorld(tresorSpawnTransform, ItemAssets.Instance.GetRandomItemType());
+        }
 
         actionDone = true;
 

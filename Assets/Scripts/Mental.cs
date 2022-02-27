@@ -36,5 +36,9 @@ public class Mental : MonoBehaviour
     {
         currentMental -= damage;
         slider.value = currentMental;
+        if(currentMental <= 0)
+        {
+            FindObjectOfType<Mort>().DisplayMort(false);
+        }
     }
 }
