@@ -5,7 +5,7 @@ using UnityEngine;
 public class PieceMonstre : Piece
 {
     [SerializeField] private CombatManager combatManager;
-    private bool actionDone = false;
+
     private Life life;
     private ItemWorld itemWorldInThePiece;
     private void Start()

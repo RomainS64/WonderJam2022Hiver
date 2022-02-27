@@ -5,7 +5,7 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
     [SerializeField]protected Sprite attackSprite, thinkingSprite;
-    [SerializeField]private SpriteRenderer spriteRenderer;
+    [SerializeField]protected SpriteRenderer spriteRenderer;
     protected bool actionDone = false;
 
     public GameObject leftDoor;
