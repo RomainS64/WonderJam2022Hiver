@@ -10,7 +10,7 @@ public class BlackScreenPiece : Piece
 
     [TextArea]
     [SerializeField]
-    protected string pieceEnterDialogue;
+    protected string[] pieceEnterDialogue;
 
     [SerializeField]
     protected string pieceChoiceLeft;
@@ -19,6 +19,8 @@ public class BlackScreenPiece : Piece
     protected string pieceChoiceRight;
 
     protected Life life;
+
+    private int currentMessageDisplayed;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class BlackScreenPiece : Piece
     protected void OnEnable()
     {
         spriteRenderer.sprite = null;
+        currentMessageDisplayed = 0;
 
         actionDone = false;
 
@@ -56,6 +59,11 @@ public class BlackScreenPiece : Piece
         FindObjectOfType<Choise>().StartChoise(pieceEnterDialogue, pieceChoiceLeft, pieceChoiceRight, ChoiceLeft, ChoiceRight);
 
         FindObjectOfType<Fade>().StartFade(0, backgroundAlphaRatio, 0.2f, -1);
+    }
+
+    private void DisplayNextMessage()
+    {
+        FindObjectOfType<Pensees>().StartPensee(pieceEnterDialogue[currentMessageDisplayed]);
     }
 
     private void FadeOut()

@@ -1,0 +1,42 @@
+Pièce 1 / Le Mirage
+
+En entamant mon entrée dans la salle suivante je regarde instinctivement par-dessus mon épaule.
+Je ne saurais décrire si ce qui m'observe à l'autre bout du couloir rélève d'un mirage ou d'une ombre fantasmée.
+La seule chose que je comprends est qu'elle me fait peur. Et essayer de l'observer me donne des vertiges insupportables.
+
+Choix : l'ignorer, se rapprocher
+
+L'ignorer : 
+Je sais qu'elle est derrière moi et elle ne me fera rien. N'est-ce pas ?
+*dégâts mentaux*
+
+Se rapprocher:
+J'arrive tant bien que mal à me diriger vers le mirage. Quand je pense être à ses pieds il se volatilise. Il n'y avait peut-être rien, finalement.
+*dégâts physiques*
+
+Pièce 2 / La dimension noire
+
+AH ! Je ne vois plus rien ! J'entends des marmonnements lointains à ma gauche.
+
+Choix : Aller à gauche, aller à droite.
+
+Aller à droite : changer de salle
+Aller à gauche : J'entends des marmonnements lointains à ma (gauche / droite).
+*perte de N mental*
+
+Gauche / Droite : changer de salle random / Par là, à ma (gauche / droite).
+*perte de 2N mental*
+
+Gauche / Droite : changer de salle random / Je les entends, à (gauche / droite).
+*perte de 4N mental*
+
+Gauche / Droite : changer de salle random / Ils sont là, tout près, (gauche / droite).
+*perte de 8N mental*
+
+Gauche / Droite : changer de salle random / Juste derrière, à (gauche / droite). J'en suis certain.
+*perte de 16N mental*
+
+Gauche / Droite : changer de salle random / AH ! -> changer de salle vers salle unique monstre unique.
+
+
+Pièce 3 / Froid
