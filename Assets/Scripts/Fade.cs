@@ -35,10 +35,10 @@ public class Fade : MonoBehaviour
         isInFade = true;
         image.color = new Color(image.color.r, image.color.g, image.color.b, fromAlpha);
         image.gameObject.SetActive(true);
-        Color colorStep = new Color(0, 0, 0, (toAlpha - fromAlpha) / 100);
-        for (int i = 0; i < 100; i++)
+        Color colorStep = new Color(0, 0, 0, (toAlpha - fromAlpha) / 20);
+        for (int i = 0; i < 20; i++)
         {
-            yield return new WaitForSeconds(time / 100f);
+            yield return new WaitForSeconds(time / 20f);
             image.color += colorStep;
         }
         image.color = new Color(image.color.r, image.color.g, image.color.b, toAlpha);

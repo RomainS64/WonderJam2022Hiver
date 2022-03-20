@@ -56,9 +56,9 @@ public class Pensees : MonoBehaviour
         penseeTxt.text = "";
         string currentText = "";
         Color endColor =new Color(penseeBG.color.r, penseeBG.color.g, penseeBG.color.b,penseeBG.color.a);
-        Color stepColor=new Color(0,0,0,penseeBG.color.a/50f);
+        Color stepColor=new Color(0,0,0,penseeBG.color.a/10f);
         penseeBG.color =new Color(penseeBG.color.r, penseeBG.color.g, penseeBG.color.b,0);
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
         {
             penseeBG.color += stepColor;
             yield return new WaitForSeconds(fadeSpeed/10f);
@@ -78,7 +78,7 @@ public class Pensees : MonoBehaviour
         }
 
         penseeTxt.text = "";
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
         {
             penseeBG.color -= stepColor;
             yield return new WaitForSeconds(fadeSpeed/10f);

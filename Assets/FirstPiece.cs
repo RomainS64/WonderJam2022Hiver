@@ -6,6 +6,7 @@ public class FirstPiece : Piece
 {
     protected void OnEnable()
     {
+        PlayerPrefs.DeleteAll();
         FindObjectOfType<Pensees>().StartPensee(DIALOGUES.firstPiece);
     }
     private void Update()

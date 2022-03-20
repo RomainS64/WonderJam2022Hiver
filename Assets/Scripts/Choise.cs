@@ -38,13 +38,13 @@ public class Choise : MonoBehaviour
         string currentText = "";
 
         Color endColor = new Color(choiseBG.color.r, choiseBG.color.g, choiseBG.color.b, choiseBG.color.a);
-        Color stepColor = new Color(0, 0, 0, choiseBG.color.a / 50f);
+        Color stepColor = new Color(0, 0, 0, choiseBG.color.a / 10f);
 
         choiseBG.color = new Color(choiseBG.color.r, choiseBG.color.g, choiseBG.color.b, 0);
         choiseRBG.color = new Color(choiseBG.color.r, choiseBG.color.g, choiseBG.color.b, 0);
         choiseLBG.color = new Color(choiseBG.color.r, choiseBG.color.g, choiseBG.color.b, 0);
 
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
         {
             choiseBG.color += stepColor;
             choiseLBG.color += stepColor;
@@ -78,7 +78,7 @@ public class Choise : MonoBehaviour
         choiseTxt.text = "";
         choiseLTxt.text = "";
         choiseRTxt.text = "";
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < 10; i++)
         {
             choiseBG.color -= stepColor;
             choiseLBG.color -= stepColor;

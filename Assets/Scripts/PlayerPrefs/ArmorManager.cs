@@ -8,7 +8,7 @@ public class ArmorManager : MonoBehaviour
     public static int GetArmor()
     {
         int armorValue;
-        armorValue = PlayerPrefs.GetInt("ArmorValue", 1);
+        armorValue = PlayerPrefs.GetInt("ArmorValue", 2);
         return armorValue;
     }
 
